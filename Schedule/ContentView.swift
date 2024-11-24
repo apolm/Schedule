@@ -11,6 +11,7 @@ struct ContentView: View {
         }
         .padding()
         .onAppear {
+            scheduleBetweenStations()
             stations()
             settlement()
             carrier()
@@ -19,6 +20,19 @@ struct ContentView: View {
 }
 
 extension ContentView {
+    func scheduleBetweenStations() {
+        guard let service = ScheduleBetweenStationsService() else { return }
+        
+        Task {
+            do {
+                let schedule = try await service.getScheduleBetweenStations(from: "c146", to: "c213")
+                print("\n>> Successfully loaded schedule between stations (\(schedule.segments?.count ?? 0))")
+            } catch {
+                print("\n!! Failed to load schedule between stations: \(error.localizedDescription)")
+            }
+        }
+    }
+    
     func stations() {
         guard let service = NearestStationsService() else { return }
         
