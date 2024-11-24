@@ -12,6 +12,7 @@ struct ContentView: View {
         .padding()
         .onAppear {
             scheduleBetweenStations()
+            scheduleForStation()
             stations()
             settlement()
             carrier()
@@ -29,6 +30,19 @@ extension ContentView {
                 print("\n>> Successfully loaded schedule between stations (\(schedule.segments?.count ?? 0))")
             } catch {
                 print("\n!! Failed to load schedule between stations: \(error.localizedDescription)")
+            }
+        }
+    }
+    
+    func scheduleForStation() {
+        guard let service = ScheduleForStationService() else { return }
+        
+        Task {
+            do {
+                let schedule = try await service.getScheduleForStation("s9600213")
+                print("\n>> Successfully loaded schedule for station: \(schedule.station?.title ?? "")")
+            } catch {
+                print("\n!! Failed to load schedule for station: \(error.localizedDescription)")
             }
         }
     }
