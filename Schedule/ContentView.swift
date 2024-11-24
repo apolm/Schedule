@@ -13,6 +13,7 @@ struct ContentView: View {
         .onAppear {
             stations()
             settlement()
+            carrier()
         }
     }
 }
@@ -28,9 +29,9 @@ extension ContentView {
                     lng: 30.319163,
                     distance: 50
                 )
-                print("Successfully loaded Stations (\(stations.stations?.count ?? 0))")
+                print("\n>> Successfully loaded Stations (\(stations.stations?.count ?? 0))")
             } catch {
-                print("Failed to load stations: \(error.localizedDescription)")
+                print("\n!! Failed to load stations: \(error.localizedDescription)")
             }
         }
     }
@@ -45,9 +46,22 @@ extension ContentView {
                     lng: 37.618423,
                     distance: 20
                 )
-                print("Successfully loaded Settlement: \(settlement.title ?? "Unknown")")
+                print("\n>> Successfully loaded Settlement: \(settlement.title ?? "Unknown")")
             } catch {
-                print("Failed to load Settlement: \(error.localizedDescription)")
+                print("\n!! Failed to load Settlement: \(error.localizedDescription)")
+            }
+        }
+    }
+    
+    func carrier() {
+        guard let service = CarrierService() else { return }
+        
+        Task {
+            do {
+                let carrier = try await service.getCarrier(code: "26")
+                print("\n>> Successfully loaded Carrier: \(carrier.title ?? "Unknown")")
+            } catch {
+                print("\n!! Failed to load Carrier: \(error.localizedDescription)")
             }
         }
     }
