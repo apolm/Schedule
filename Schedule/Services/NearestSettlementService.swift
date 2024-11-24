@@ -1,0 +1,27 @@
+import OpenAPIRuntime
+import OpenAPIURLSession
+
+typealias NearestSettlement = Components.Schemas.Settlement
+
+protocol NearestSettlementServiceProtocol {
+    func getNearestSettlement(lat: Double, lng: Double, distance: Int) async throws -> NearestSettlement
+}
+
+final class NearestSettlementService: NearestSettlementServiceProtocol {
+    private let client: Client
+    
+    init?() {
+        guard let client = ClientFactory.createClient() else { return nil }
+        self.client = client
+    }
+    
+    func getNearestSettlement(lat: Double, lng: Double, distance: Int) async throws -> NearestSettlement {
+        let response = try await client.getNearestSettlement(query: .init(
+            apikey: Constants.apiKey,
+            lat: lat,
+            lng: lng,
+            distance: distance
+        ))
+        return try response.ok.body.json
+    }
+}

@@ -6,14 +6,16 @@ info:
 servers:
 - url: https://api.rasp.yandex.net
 tags:
-- name: Список ближайших станций
-  description: Список ближайших станций
+- name: Stations
+  description: List of nearest stations.
+- name: Settlement
+  description: Information about the city nearest to the specified point.
 paths:
   /v3.0/nearest_stations/:
     get:
       tags:
-      - getNearestStations
-      summary: Список ближайших станций
+      - Stations
+      summary: Find nearest stations
       operationId: getNearestStations
       parameters:
       - name: apikey
@@ -24,31 +26,31 @@ paths:
           type: string
       - name: lat
         in: query
-        description: широта
+        description: Latitude
         required: true
         schema:
           type: number
       - name: lng
         in: query
-        description: долгота
+        description: Longitude
         required: true
         schema:
           type: number
       - name: distance
         in: query
-        description: радиус охвата
+        description: Search radius
         required: true
         schema:
           type: integer
       - name: format
         in: query
-        description: json или xml
+        description: Response format (json or xml)
         required: false
         schema:
           type: string
       - name: lang
         in: query
-        description: lang
+        description: Language
         required: false
         schema:
           type: string
@@ -59,6 +61,50 @@ paths:
             application/json:
               schema:
                 $ref: '#/components/schemas/Stations'
+  /v3.0/nearest_settlement/:
+    get:
+      tags:
+      - Settlement
+      summary: Find nearest settlement
+      operationId: getNearestSettlement
+      parameters:
+      - name: apikey
+        in: query
+        description: API key
+        required: true
+        schema:
+          type: string
+      - name: lat
+        in: query
+        description: Latitude
+        required: true
+        schema:
+          type: number
+      - name: lng
+        in: query
+        description: Longitude
+        required: true
+        schema:
+          type: number
+      - name: distance
+        in: query
+        description: Search radius
+        required: false
+        schema:
+          type: integer
+      - name: lang
+        in: query
+        description: Language
+        required: false
+        schema:
+          type: string
+      responses:
+        "200":
+          description: success
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Settlement'
 components:
   schemas:
     Stations:
@@ -115,3 +161,30 @@ components:
           type: string
         touch_url:
           type: string
+    Settlement:
+      type: object
+      properties:
+        distance:
+          type: number
+          description: Расстояние до найденного города, в километрах
+        code:
+          type: string
+          description: Код города в системе кодирования Яндекс Расписаний
+        title:
+          type: string
+          description: Название города
+        popular_title:
+          type: string
+          description: Общепринятое название города
+        short_title:
+          type: string
+          description: Краткое название города
+        lat:
+          type: number
+          description: Широта
+        lng:
+          type: number
+          description: Долгота
+        type:
+          type: string
+          description: Тип транспортного пункта (station — станция; settlement — поселение)

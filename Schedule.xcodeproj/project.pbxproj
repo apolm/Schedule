@@ -17,6 +17,8 @@
 		8F69FA912CF044210078C2A5 /* openapi-generator-config.yaml in Resources */ = {isa = PBXBuildFile; fileRef = 8F69FA902CF044210078C2A5 /* openapi-generator-config.yaml */; };
 		8F69FA952CF051020078C2A5 /* NearestStationsService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F69FA942CF051020078C2A5 /* NearestStationsService.swift */; };
 		8F69FA992CF0551D0078C2A5 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F69FA982CF0551D0078C2A5 /* Constants.swift */; };
+		8FF065792CF3046D00347B67 /* NearestSettlementService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8FF065782CF3046D00347B67 /* NearestSettlementService.swift */; };
+		8FF0657C2CF325DD00347B67 /* ClientFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8FF0657B2CF325DD00347B67 /* ClientFactory.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -29,6 +31,8 @@
 		8F69FA902CF044210078C2A5 /* openapi-generator-config.yaml */ = {isa = PBXFileReference; lastKnownFileType = text.yaml; path = "openapi-generator-config.yaml"; sourceTree = "<group>"; };
 		8F69FA942CF051020078C2A5 /* NearestStationsService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NearestStationsService.swift; sourceTree = "<group>"; };
 		8F69FA982CF0551D0078C2A5 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		8FF065782CF3046D00347B67 /* NearestSettlementService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NearestSettlementService.swift; sourceTree = "<group>"; };
+		8FF0657B2CF325DD00347B67 /* ClientFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClientFactory.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -66,6 +70,7 @@
 				8F08A4572CE323F2000D2061 /* ScheduleApp.swift */,
 				8F08A4592CE323F2000D2061 /* ContentView.swift */,
 				8F69FA972CF054E40078C2A5 /* CommonObjects */,
+				8FF0657A2CF3259900347B67 /* Helpers */,
 				8F69FA8C2CF043530078C2A5 /* Resources */,
 				8F69FA932CF050960078C2A5 /* Services */,
 				8F08A45D2CE323F4000D2061 /* Preview Content */,
@@ -103,6 +108,7 @@
 			isa = PBXGroup;
 			children = (
 				8F69FA942CF051020078C2A5 /* NearestStationsService.swift */,
+				8FF065782CF3046D00347B67 /* NearestSettlementService.swift */,
 			);
 			path = Services;
 			sourceTree = "<group>";
@@ -113,6 +119,14 @@
 				8F69FA982CF0551D0078C2A5 /* Constants.swift */,
 			);
 			path = CommonObjects;
+			sourceTree = "<group>";
+		};
+		8FF0657A2CF3259900347B67 /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+				8FF0657B2CF325DD00347B67 /* ClientFactory.swift */,
+			);
+			path = Helpers;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -198,7 +212,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				8F08A45A2CE323F2000D2061 /* ContentView.swift in Sources */,
+				8FF065792CF3046D00347B67 /* NearestSettlementService.swift in Sources */,
 				8F69FA952CF051020078C2A5 /* NearestStationsService.swift in Sources */,
+				8FF0657C2CF325DD00347B67 /* ClientFactory.swift in Sources */,
 				8F08A4582CE323F2000D2061 /* ScheduleApp.swift in Sources */,
 				8F69FA992CF0551D0078C2A5 /* Constants.swift in Sources */,
 			);

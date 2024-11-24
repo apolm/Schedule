@@ -11,29 +11,44 @@ struct ContentView: View {
         }
         .padding()
         .onAppear {
-            do { try stations() } catch {
-                print("Failed to load Stations: \(error.localizedDescription)")
-            }
+            stations()
+            settlement()
         }
     }
 }
 
 extension ContentView {
-    func stations() throws {
-        let client = Client(
-            serverURL: try Servers.Server1.url(),
-            transport: URLSessionTransport()
-        )
-        
-        let service = NearestStationsService(client: client)
+    func stations() {
+        guard let service = NearestStationsService() else { return }
         
         Task {
-            let stations = try await service.getNearestStations(
-                lat: 59.864177,
-                lng: 30.319163,
-                distance: 50
-            )
-            print("Successfully loaded Stations (\(stations.stations?.count ?? 0))")
+            do {
+                let stations = try await service.getNearestStations(
+                    lat: 59.864177,
+                    lng: 30.319163,
+                    distance: 50
+                )
+                print("Successfully loaded Stations (\(stations.stations?.count ?? 0))")
+            } catch {
+                print("Failed to load stations: \(error.localizedDescription)")
+            }
+        }
+    }
+    
+    func settlement() {
+        guard let service = NearestSettlementService() else { return }
+        
+        Task {
+            do {
+                let settlement = try await service.getNearestSettlement(
+                    lat: 55.751244,
+                    lng: 37.618423,
+                    distance: 20
+                )
+                print("Successfully loaded Settlement: \(settlement.title ?? "Unknown")")
+            } catch {
+                print("Failed to load Settlement: \(error.localizedDescription)")
+            }
         }
     }
 }
