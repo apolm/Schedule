@@ -13,6 +13,7 @@ struct ContentView: View {
         .onAppear {
             scheduleBetweenStations()
             scheduleForStation()
+            scheduleThread()
             stations()
             settlement()
             carrier()
@@ -47,6 +48,19 @@ extension ContentView {
         }
     }
     
+    func scheduleThread() {
+        guard let service = ScheduleThreadService() else { return }
+        
+        Task {
+            do {
+                let scheduleThread = try await service.getThread(uid: "SU-1524_250111_c26_12")
+                print("\n>> Successfully loaded Thread: \(scheduleThread.title ?? "")")
+            } catch {
+                print("\n!! Failed to load Thread: \(error.localizedDescription)")
+            }
+        }
+    }
+    
     func stations() {
         guard let service = NearestStationsService() else { return }
         
@@ -59,7 +73,7 @@ extension ContentView {
                 )
                 print("\n>> Successfully loaded Stations (\(stations.stations?.count ?? 0))")
             } catch {
-                print("\n!! Failed to load stations: \(error.localizedDescription)")
+                print("\n!! Failed to load Stations: \(error.localizedDescription)")
             }
         }
     }

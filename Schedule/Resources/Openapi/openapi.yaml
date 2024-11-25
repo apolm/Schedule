@@ -10,6 +10,8 @@ tags:
   description: Schedule between two given stations.
 - name: Schedule
   description: Schedule for a given station.
+- name: Thread
+  description: List of stations along the specified route.
 - name: Stations
   description: List of nearest stations.
 - name: Settlement
@@ -241,6 +243,68 @@ paths:
             application/json:
               schema:
                 $ref: '#/components/schemas/ScheduleForStation'
+  /v3.0/thread/:
+    get:
+      tags:
+      - Thread
+      summary: Get schedule information for a thread
+      operationId: getThread
+      parameters:
+      - name: apikey
+        in: query
+        required: false
+        description: API access key. Can be passed as a query parameter or in the Authorization header.
+        schema:
+          type: string
+      - name: uid
+        in: query
+        required: true
+        description: Thread identifier in Yandex Schedule. Must be up-to-date.
+        schema:
+          type: string
+      - name: from
+        in: query
+        required: false
+        description: Departure station code (or city code) in the Yandex coding system.
+        schema:
+          type: string
+      - name: to
+        in: query
+        required: false
+        description: Arrival station code (or city code) in the Yandex coding system.
+        schema:
+          type: string
+      - name: format
+        in: query
+        required: false
+        description: Format of the response.
+        schema:
+          type: string
+      - name: lang
+        in: query
+        required: false
+        description: Language for the response in <language code>_<country code> format.
+        schema:
+          type: string
+      - name: date
+        in: query
+        required: false
+        description: Date for the schedule in ISO 8601 format (YYYY-MM-DD). Defaults to the first date of the thread.
+        schema:
+          type: string
+      - name: show_systems
+        in: query
+        required: false
+        description: Specify the encoding system for station codes in the response.
+        schema:
+          type: string
+      responses:
+        "200":
+          description: success
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Thread'
   /v3.0/nearest_stations/:
     get:
       tags:
@@ -500,7 +564,7 @@ components:
         from:
           $ref: '#/components/schemas/SegmentStation'
         thread:
-          $ref: '#/components/schemas/Thread'
+          $ref: '#/components/schemas/ThreadDetails'
         departure_platform:
           type: string
           description: 'Platform number at the departure station.'
@@ -543,7 +607,7 @@ components:
         from:
           $ref: '#/components/schemas/SegmentStation'
         thread:
-          $ref: '#/components/schemas/Thread'
+          $ref: '#/components/schemas/ThreadDetails'
         departure_platform:
           type: string
           description: 'Platform number at the departure station.'
@@ -635,7 +699,7 @@ components:
           enum:
             - station
             - settlement
-    Thread:
+    ThreadDetails:
       type: object
       properties:
         uid:
@@ -874,7 +938,7 @@ components:
           type: string
           description: Arrival time in ISO 8601 format (YYYY-MM-DDThh:mm:ss±hh:mm).
         thread:
-          $ref: '#/components/schemas/Thread'
+          $ref: '#/components/schemas/ThreadDetails'
         is_fuzzy:
           type: boolean
           description: Indicates if the departure and arrival times are approximate.
@@ -929,3 +993,91 @@ components:
         title:
           type: string
           description: Direction name. Typically matches the code for custom values (e.g., "to Moscow").
+    Thread:
+      type: object
+      properties:
+        except_days:
+          type: string
+          description: "Days when the thread does not run, even if they are part of the days specified."
+        arrival_date:
+          type: string
+          description: "Arrival date at the station specified in the 'to' parameter. Included only if the thread is not an interval-based thread."
+        from:
+          type: string
+          description: "The departure station specified in the 'from' parameter."
+        uid:
+          type: string
+          maxLength: 100
+          description: "Unique identifier for the thread in Yandex Schedules."
+        title:
+          type: string
+          description: "Full name of the thread, composed of the full names of the first and last stations."
+        interval:
+          $ref: '#/components/schemas/Interval'
+        departure_date:
+          type: string
+          description: "Departure date from the station specified in the 'from' parameter. Included only if the thread is not interval-based."
+        number:
+          type: string
+          description: "Flight number for the thread."
+        short_title:
+          type: string
+          description: "Short name of the thread, composed of short names of the first and last stations."
+        days:
+          type: string
+          description: "Days when the thread operates."
+        to:
+          type: string
+          description: "Arrival station specified in the 'to' parameter."
+        carrier:
+          $ref: '#/components/schemas/ThreadCarrier'
+        stops:
+          type: array
+          items:
+            $ref: '#/components/schemas/ThreadStops'
+        vehicle:
+          type: string
+          description: "Name of the vehicle used for the thread."
+        start_date:
+          type: string
+          description: "Start date of the thread's operation."
+        transport_subtype:
+          $ref: '#/components/schemas/TransportSubtype'
+        express_type:
+          type: string
+          description: "Indicates whether the thread is an express or aeroexpress."
+    ThreadStops:
+      type: object
+      properties:
+        arrival:
+          type: string
+          description: "Arrival time at the station in ISO 8601 format (YYYY-MM-DDThh:mm:ss±hh:mm)."
+        departure:
+          type: string
+          description: "Departure time from the station in ISO 8601 format (YYYY-MM-DDThh:mm:ss±hh:mm)."
+        duration:
+          type: integer
+          description: "Travel time between stations in seconds."
+        stop_time:
+          type: integer
+          description: "Duration of the stop in seconds."
+        station:
+          $ref: '#/components/schemas/ScheduleStation'
+        terminal:
+          type: string
+          nullable: true
+          description: "Terminal at the airport (e.g., 'D'). If the terminal information is not available, this is null."
+        platform:
+          type: string
+          description: "Platform or track from which the train departs (e.g., 'track 3'). If platform information is not available, this field is empty."
+    ThreadCarrier:
+      type: object
+      properties:
+        code:
+          type: integer
+          description: "Carrier code in the Yandex Raspisania coding system."
+        title:
+          type: string
+          description: "Name of the carrier."
+        codes:
+          $ref: '#/components/schemas/CarrierCodes'
