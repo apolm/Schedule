@@ -17,6 +17,7 @@ struct ContentView: View {
             stations()
             settlement()
             carrier()
+            stationsList()
         }
     }
 }
@@ -104,6 +105,19 @@ extension ContentView {
                 print("\n>> Successfully loaded Carrier: \(carrier.title ?? "Unknown")")
             } catch {
                 print("\n!! Failed to load Carrier: \(error.localizedDescription)")
+            }
+        }
+    }
+    
+    func stationsList() {
+        guard let service = StationsListService() else { return }
+        
+        Task {
+            do {
+                let stationsList = try await service.getStationsList()
+                print("\n>> Successfully loaded Stations List (countries: \(stationsList.countries?.count ?? 0))")
+            } catch {
+                print("\n!! Failed to load Stations List: \(error.localizedDescription)")
             }
         }
     }

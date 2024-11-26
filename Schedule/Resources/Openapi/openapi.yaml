@@ -18,6 +18,8 @@ tags:
   description: Information about the city nearest to the specified point.
 - name: Carrier
   description: Retrieves carrier details based on the carrier code.
+- name: StationsList
+  description: Full list of stations, information about which is provided by Yandex Schedules.
 paths:
   /v3.0/search/:
     get:
@@ -443,6 +445,38 @@ paths:
             application/json:
               schema:
                 $ref: '#/components/schemas/CarrierResponse'
+  /v3.0/stations_list/:
+    get:
+      tags:
+      - StationsList
+      summary: Request full list of stations
+      operationId: getStationsList
+      parameters:
+      - name: apikey
+        in: query
+        required: true
+        description: API key for access
+        schema:
+          type: string
+      - name: lang
+        in: query
+        required: false
+        description: Language for the response
+        schema:
+          type: string
+      - name: format
+        in: query
+        required: false
+        description: Response format.
+        schema:
+          type: string
+      responses:
+        "200":
+          description: success
+          content:
+            text/html:
+              schema:
+                $ref: '#/components/schemas/StationsList'
 components:
   schemas:
     Stations:
@@ -1081,3 +1115,79 @@ components:
           description: "Name of the carrier."
         codes:
           $ref: '#/components/schemas/CarrierCodes'
+    StationsList:
+      type: object
+      properties:
+        countries:
+          type: array
+          description: "List of countries."
+          items:
+            $ref: '#/components/schemas/Country'
+    Country:
+      type: object
+      properties:
+        regions:
+          type: array
+          items:
+            $ref: '#/components/schemas/Region'
+        codes:
+          $ref: '#/components/schemas/StationsListCodes'
+        title:
+          type: string
+          description: "Name of the country."
+    Region:
+      type: object
+      properties:
+        settlements:
+          type: array
+          items:
+            $ref: '#/components/schemas/StationsListSettlement'
+        codes:
+          $ref: '#/components/schemas/StationsListCodes'
+        title:
+          type: string
+          description: "Name of the region."
+    StationsListSettlement:
+      type: object
+      properties:
+        title:
+          type: string
+          description: "Name of the settlement."
+        codes:
+          $ref: '#/components/schemas/StationsListCodes'
+        stations:
+          type: array
+          items:
+            $ref: '#/components/schemas/StationsListStation'
+    StationsListStation:
+      type: object
+      properties:
+        direction:
+          type: string
+          description: "Train direction for the station. Empty if the station is not railway-related."
+        codes:
+          $ref: '#/components/schemas/StationsListStationCodes'
+        station_type:
+          type: string
+          description: "Type of the station."
+        title:
+          type: string
+          description: "Name of the station."
+        transport_type:
+          type: string
+          description: "Type of transport passing through the station."
+    StationsListCodes:
+      type: object
+      properties:
+        yandex_code:
+          type: string
+          description: "Code in the Yandex Raspisania coding system."
+    StationsListStationCodes:
+      type: object
+      properties:
+        yandex_code:
+          type: string
+          description: "Code in the Yandex Raspisania coding system."
+        esr_code:
+         type: string
+         description: "Code of the railway station in the ESR coding system."

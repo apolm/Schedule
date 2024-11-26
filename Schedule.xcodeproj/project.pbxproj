@@ -23,6 +23,7 @@
 		8FF065822CF385C500347B67 /* ScheduleBetweenStationsService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8FF065812CF385C500347B67 /* ScheduleBetweenStationsService.swift */; };
 		8FF065862CF39E0C00347B67 /* ScheduleForStationService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8FF065852CF39E0C00347B67 /* ScheduleForStationService.swift */; };
 		8FF065892CF3AC9A00347B67 /* ScheduleThreadService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8FF065882CF3AC9A00347B67 /* ScheduleThreadService.swift */; };
+		8FF0658D2CF43C0300347B67 /* StationsListService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8FF0658C2CF43C0300347B67 /* StationsListService.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -41,6 +42,7 @@
 		8FF065812CF385C500347B67 /* ScheduleBetweenStationsService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScheduleBetweenStationsService.swift; sourceTree = "<group>"; };
 		8FF065852CF39E0C00347B67 /* ScheduleForStationService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScheduleForStationService.swift; sourceTree = "<group>"; };
 		8FF065882CF3AC9A00347B67 /* ScheduleThreadService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScheduleThreadService.swift; sourceTree = "<group>"; };
+		8FF0658C2CF43C0300347B67 /* StationsListService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StationsListService.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -121,6 +123,7 @@
 				8F69FA942CF051020078C2A5 /* NearestStationsService.swift */,
 				8FF065782CF3046D00347B67 /* NearestSettlementService.swift */,
 				8FF0657E2CF3306C00347B67 /* CarrierService.swift */,
+				8FF0658C2CF43C0300347B67 /* StationsListService.swift */,
 			);
 			path = Services;
 			sourceTree = "<group>";
@@ -224,6 +227,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				8FF0657F2CF3306C00347B67 /* CarrierService.swift in Sources */,
+				8FF0658D2CF43C0300347B67 /* StationsListService.swift in Sources */,
 				8F08A45A2CE323F2000D2061 /* ContentView.swift in Sources */,
 				8FF065792CF3046D00347B67 /* NearestSettlementService.swift in Sources */,
 				8F69FA952CF051020078C2A5 /* NearestStationsService.swift in Sources */,
