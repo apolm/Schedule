@@ -11,6 +11,7 @@
 		8F08A45A2CE323F2000D2061 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F08A4592CE323F2000D2061 /* ContentView.swift */; };
 		8F08A45C2CE323F4000D2061 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8F08A45B2CE323F4000D2061 /* Assets.xcassets */; };
 		8F08A45F2CE323F4000D2061 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8F08A45E2CE323F4000D2061 /* Preview Assets.xcassets */; };
+		8F44C22B2CF599DB00663D7A /* CopyrightService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F44C22A2CF599DB00663D7A /* CopyrightService.swift */; };
 		8F69FA862CF040EC0078C2A5 /* OpenAPIRuntime in Frameworks */ = {isa = PBXBuildFile; productRef = 8F69FA852CF040EC0078C2A5 /* OpenAPIRuntime */; };
 		8F69FA892CF041290078C2A5 /* OpenAPIURLSession in Frameworks */ = {isa = PBXBuildFile; productRef = 8F69FA882CF041290078C2A5 /* OpenAPIURLSession */; };
 		8F69FA8E2CF043BD0078C2A5 /* openapi.yaml in Resources */ = {isa = PBXBuildFile; fileRef = 8F69FA8D2CF043BD0078C2A5 /* openapi.yaml */; };
@@ -32,6 +33,7 @@
 		8F08A4592CE323F2000D2061 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		8F08A45B2CE323F4000D2061 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		8F08A45E2CE323F4000D2061 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		8F44C22A2CF599DB00663D7A /* CopyrightService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CopyrightService.swift; sourceTree = "<group>"; };
 		8F69FA8D2CF043BD0078C2A5 /* openapi.yaml */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.yaml; path = openapi.yaml; sourceTree = "<group>"; };
 		8F69FA902CF044210078C2A5 /* openapi-generator-config.yaml */ = {isa = PBXFileReference; lastKnownFileType = text.yaml; path = "openapi-generator-config.yaml"; sourceTree = "<group>"; };
 		8F69FA942CF051020078C2A5 /* NearestStationsService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NearestStationsService.swift; sourceTree = "<group>"; };
@@ -124,6 +126,7 @@
 				8FF065782CF3046D00347B67 /* NearestSettlementService.swift */,
 				8FF0657E2CF3306C00347B67 /* CarrierService.swift */,
 				8FF0658C2CF43C0300347B67 /* StationsListService.swift */,
+				8F44C22A2CF599DB00663D7A /* CopyrightService.swift */,
 			);
 			path = Services;
 			sourceTree = "<group>";
@@ -237,6 +240,7 @@
 				8F69FA992CF0551D0078C2A5 /* Constants.swift in Sources */,
 				8FF065862CF39E0C00347B67 /* ScheduleForStationService.swift in Sources */,
 				8FF065892CF3AC9A00347B67 /* ScheduleThreadService.swift in Sources */,
+				8F44C22B2CF599DB00663D7A /* CopyrightService.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

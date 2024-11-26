@@ -20,6 +20,8 @@ tags:
   description: Retrieves carrier details based on the carrier code.
 - name: StationsList
   description: Full list of stations, information about which is provided by Yandex Schedules.
+- name: Copyright
+  description: Metadata about Yandex Schedule service.
 paths:
   /v3.0/search/:
     get:
@@ -477,6 +479,32 @@ paths:
             text/html:
               schema:
                 $ref: '#/components/schemas/StationsList'
+  /v3.0/copyright/:
+    get:
+      tags:
+      - Copyright
+      summary: Request API metadata
+      operationId: getCopyright
+      parameters:
+      - name: apikey
+        in: query
+        required: true
+        description: API key for access
+        schema:
+          type: string
+      - name: format
+        in: query
+        required: false
+        description: Response format.
+        schema:
+          type: string
+      responses:
+        "200":
+          description: success
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/CopyrightResponse'
 components:
   schemas:
     Stations:
@@ -1191,3 +1219,36 @@ components:
         esr_code:
          type: string
          description: "Code of the railway station in the ESR coding system."
+    CopyrightResponse:
+      type: object
+      properties:
+        copyright:
+          $ref: '#/components/schemas/Copyright'
+    Copyright:
+      type: object
+      properties:
+        logo_vm:
+          type: string
+          description: Vertical monochrome banner.
+        url:
+          type: string
+          description: URL of Yandex Schedules.
+        logo_vd:
+          type: string
+          description: Vertical black-and-white banner.
+        logo_hy:
+          type: string
+          description: Horizontal color banner.
+        logo_hd:
+          type: string
+          description: Horizontal black-and-white banner.
+        logo_vy:
+          type: string
+          description: Vertical color banner.
+        text:
+          type: string
+          description: Notification text.
+        logo_hm:
+          type: string
+          description: Horizontal monochrome banner.
+

@@ -18,6 +18,7 @@ struct ContentView: View {
             settlement()
             carrier()
             stationsList()
+            copyright()
         }
     }
 }
@@ -118,6 +119,19 @@ extension ContentView {
                 print("\n>> Successfully loaded Stations List (countries: \(stationsList.countries?.count ?? 0))")
             } catch {
                 print("\n!! Failed to load Stations List: \(error.localizedDescription)")
+            }
+        }
+    }
+    
+    func copyright() {
+        guard let service = CopyrightService() else { return }
+        
+        Task {
+            do {
+                let copyrightInfo = try await service.getCopyright()
+                print("\n>> Successfully loaded Copyright Info: \(copyrightInfo.text ?? "Unknown")")
+            } catch {
+                print("\n!! Failed to load Copyright Info: \(error.localizedDescription)")
             }
         }
     }
