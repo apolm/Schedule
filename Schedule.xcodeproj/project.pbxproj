@@ -11,7 +11,35 @@
 		8F08A45A2CE323F2000D2061 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F08A4592CE323F2000D2061 /* ContentView.swift */; };
 		8F08A45C2CE323F4000D2061 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8F08A45B2CE323F4000D2061 /* Assets.xcassets */; };
 		8F08A45F2CE323F4000D2061 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8F08A45E2CE323F4000D2061 /* Preview Assets.xcassets */; };
+		8F39C98C2CFCAD540065A830 /* AuthenticationMiddleware.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F39C98B2CFCAD540065A830 /* AuthenticationMiddleware.swift */; };
+		8F39C9902CFCB6520065A830 /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F39C98F2CFCB6520065A830 /* NetworkManager.swift */; };
+		8F39C9A12CFCBC140065A830 /* ServicesTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F39C9A02CFCBC140065A830 /* ServicesTests.swift */; };
+		8F39C9A32CFCBD4E0065A830 /* ServiceManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F39C9A22CFCBD4E0065A830 /* ServiceManager.swift */; };
+		8F44C22B2CF599DB00663D7A /* CopyrightService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F44C22A2CF599DB00663D7A /* CopyrightService.swift */; };
+		8F69FA862CF040EC0078C2A5 /* OpenAPIRuntime in Frameworks */ = {isa = PBXBuildFile; productRef = 8F69FA852CF040EC0078C2A5 /* OpenAPIRuntime */; };
+		8F69FA892CF041290078C2A5 /* OpenAPIURLSession in Frameworks */ = {isa = PBXBuildFile; productRef = 8F69FA882CF041290078C2A5 /* OpenAPIURLSession */; };
+		8F69FA8E2CF043BD0078C2A5 /* openapi.yaml in Resources */ = {isa = PBXBuildFile; fileRef = 8F69FA8D2CF043BD0078C2A5 /* openapi.yaml */; };
+		8F69FA912CF044210078C2A5 /* openapi-generator-config.yaml in Resources */ = {isa = PBXBuildFile; fileRef = 8F69FA902CF044210078C2A5 /* openapi-generator-config.yaml */; };
+		8F69FA952CF051020078C2A5 /* NearestStationsService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F69FA942CF051020078C2A5 /* NearestStationsService.swift */; };
+		8F69FA992CF0551D0078C2A5 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F69FA982CF0551D0078C2A5 /* Constants.swift */; };
+		8FF065792CF3046D00347B67 /* NearestSettlementService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8FF065782CF3046D00347B67 /* NearestSettlementService.swift */; };
+		8FF0657C2CF325DD00347B67 /* ClientFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8FF0657B2CF325DD00347B67 /* ClientFactory.swift */; };
+		8FF0657F2CF3306C00347B67 /* CarrierService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8FF0657E2CF3306C00347B67 /* CarrierService.swift */; };
+		8FF065822CF385C500347B67 /* ScheduleBetweenStationsService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8FF065812CF385C500347B67 /* ScheduleBetweenStationsService.swift */; };
+		8FF065862CF39E0C00347B67 /* ScheduleForStationService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8FF065852CF39E0C00347B67 /* ScheduleForStationService.swift */; };
+		8FF065892CF3AC9A00347B67 /* ScheduleThreadService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8FF065882CF3AC9A00347B67 /* ScheduleThreadService.swift */; };
+		8FF0658D2CF43C0300347B67 /* StationsListService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8FF0658C2CF43C0300347B67 /* StationsListService.swift */; };
 /* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		8F39C99A2CFCBBE30065A830 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 8F08A44C2CE323F2000D2061 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 8F08A4532CE323F2000D2061;
+			remoteInfo = Schedule;
+		};
+/* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
 		8F08A4542CE323F2000D2061 /* Schedule.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Schedule.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -19,10 +47,36 @@
 		8F08A4592CE323F2000D2061 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		8F08A45B2CE323F4000D2061 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		8F08A45E2CE323F4000D2061 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		8F39C98B2CFCAD540065A830 /* AuthenticationMiddleware.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthenticationMiddleware.swift; sourceTree = "<group>"; };
+		8F39C98F2CFCB6520065A830 /* NetworkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkManager.swift; sourceTree = "<group>"; };
+		8F39C9962CFCBBE30065A830 /* ScheduleTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ScheduleTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		8F39C9A02CFCBC140065A830 /* ServicesTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServicesTests.swift; sourceTree = "<group>"; };
+		8F39C9A22CFCBD4E0065A830 /* ServiceManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServiceManager.swift; sourceTree = "<group>"; };
+		8F44C22A2CF599DB00663D7A /* CopyrightService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CopyrightService.swift; sourceTree = "<group>"; };
+		8F69FA8D2CF043BD0078C2A5 /* openapi.yaml */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.yaml; path = openapi.yaml; sourceTree = "<group>"; };
+		8F69FA902CF044210078C2A5 /* openapi-generator-config.yaml */ = {isa = PBXFileReference; lastKnownFileType = text.yaml; path = "openapi-generator-config.yaml"; sourceTree = "<group>"; };
+		8F69FA942CF051020078C2A5 /* NearestStationsService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NearestStationsService.swift; sourceTree = "<group>"; };
+		8F69FA982CF0551D0078C2A5 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		8FF065782CF3046D00347B67 /* NearestSettlementService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NearestSettlementService.swift; sourceTree = "<group>"; };
+		8FF0657B2CF325DD00347B67 /* ClientFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClientFactory.swift; sourceTree = "<group>"; };
+		8FF0657E2CF3306C00347B67 /* CarrierService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CarrierService.swift; sourceTree = "<group>"; };
+		8FF065812CF385C500347B67 /* ScheduleBetweenStationsService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScheduleBetweenStationsService.swift; sourceTree = "<group>"; };
+		8FF065852CF39E0C00347B67 /* ScheduleForStationService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScheduleForStationService.swift; sourceTree = "<group>"; };
+		8FF065882CF3AC9A00347B67 /* ScheduleThreadService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScheduleThreadService.swift; sourceTree = "<group>"; };
+		8FF0658C2CF43C0300347B67 /* StationsListService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StationsListService.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
 		8F08A4512CE323F2000D2061 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8F69FA892CF041290078C2A5 /* OpenAPIURLSession in Frameworks */,
+				8F69FA862CF040EC0078C2A5 /* OpenAPIRuntime in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		8F39C9932CFCBBE30065A830 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -36,6 +90,7 @@
 			isa = PBXGroup;
 			children = (
 				8F08A4562CE323F2000D2061 /* Schedule */,
+				8F39C9972CFCBBE30065A830 /* ScheduleTests */,
 				8F08A4552CE323F2000D2061 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -44,6 +99,7 @@
 			isa = PBXGroup;
 			children = (
 				8F08A4542CE323F2000D2061 /* Schedule.app */,
+				8F39C9962CFCBBE30065A830 /* ScheduleTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -53,7 +109,9 @@
 			children = (
 				8F08A4572CE323F2000D2061 /* ScheduleApp.swift */,
 				8F08A4592CE323F2000D2061 /* ContentView.swift */,
-				8F08A45B2CE323F4000D2061 /* Assets.xcassets */,
+				8F69FA972CF054E40078C2A5 /* CommonObjects */,
+				8F69FA8C2CF043530078C2A5 /* Resources */,
+				8F69FA932CF050960078C2A5 /* Services */,
 				8F08A45D2CE323F4000D2061 /* Preview Content */,
 			);
 			path = Schedule;
@@ -65,6 +123,67 @@
 				8F08A45E2CE323F4000D2061 /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		8F39C9972CFCBBE30065A830 /* ScheduleTests */ = {
+			isa = PBXGroup;
+			children = (
+				8F39C9A02CFCBC140065A830 /* ServicesTests.swift */,
+			);
+			path = ScheduleTests;
+			sourceTree = "<group>";
+		};
+		8F69FA8C2CF043530078C2A5 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				8F69FA8F2CF043EB0078C2A5 /* Openapi */,
+				8F08A45B2CE323F4000D2061 /* Assets.xcassets */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		8F69FA8F2CF043EB0078C2A5 /* Openapi */ = {
+			isa = PBXGroup;
+			children = (
+				8F69FA8D2CF043BD0078C2A5 /* openapi.yaml */,
+				8F69FA902CF044210078C2A5 /* openapi-generator-config.yaml */,
+			);
+			path = Openapi;
+			sourceTree = "<group>";
+		};
+		8F69FA932CF050960078C2A5 /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				8FF0657A2CF3259900347B67 /* Helpers */,
+				8FF065812CF385C500347B67 /* ScheduleBetweenStationsService.swift */,
+				8FF065852CF39E0C00347B67 /* ScheduleForStationService.swift */,
+				8FF065882CF3AC9A00347B67 /* ScheduleThreadService.swift */,
+				8F69FA942CF051020078C2A5 /* NearestStationsService.swift */,
+				8FF065782CF3046D00347B67 /* NearestSettlementService.swift */,
+				8FF0657E2CF3306C00347B67 /* CarrierService.swift */,
+				8FF0658C2CF43C0300347B67 /* StationsListService.swift */,
+				8F44C22A2CF599DB00663D7A /* CopyrightService.swift */,
+			);
+			path = Services;
+			sourceTree = "<group>";
+		};
+		8F69FA972CF054E40078C2A5 /* CommonObjects */ = {
+			isa = PBXGroup;
+			children = (
+				8F69FA982CF0551D0078C2A5 /* Constants.swift */,
+			);
+			path = CommonObjects;
+			sourceTree = "<group>";
+		};
+		8FF0657A2CF3259900347B67 /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+				8F39C98B2CFCAD540065A830 /* AuthenticationMiddleware.swift */,
+				8FF0657B2CF325DD00347B67 /* ClientFactory.swift */,
+				8F39C98F2CFCB6520065A830 /* NetworkManager.swift */,
+				8F39C9A22CFCBD4E0065A830 /* ServiceManager.swift */,
+			);
+			path = Helpers;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -81,11 +200,34 @@
 			buildRules = (
 			);
 			dependencies = (
+				8F69FA8B2CF041BF0078C2A5 /* PBXTargetDependency */,
 			);
 			name = Schedule;
+			packageProductDependencies = (
+				8F69FA852CF040EC0078C2A5 /* OpenAPIRuntime */,
+				8F69FA882CF041290078C2A5 /* OpenAPIURLSession */,
+			);
 			productName = Schedule;
 			productReference = 8F08A4542CE323F2000D2061 /* Schedule.app */;
 			productType = "com.apple.product-type.application";
+		};
+		8F39C9952CFCBBE30065A830 /* ScheduleTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 8F39C99C2CFCBBE30065A830 /* Build configuration list for PBXNativeTarget "ScheduleTests" */;
+			buildPhases = (
+				8F39C9922CFCBBE30065A830 /* Sources */,
+				8F39C9932CFCBBE30065A830 /* Frameworks */,
+				8F39C9942CFCBBE30065A830 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				8F39C99B2CFCBBE30065A830 /* PBXTargetDependency */,
+			);
+			name = ScheduleTests;
+			productName = ScheduleTests;
+			productReference = 8F39C9962CFCBBE30065A830 /* ScheduleTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
 		};
 /* End PBXNativeTarget section */
 
@@ -100,6 +242,10 @@
 					8F08A4532CE323F2000D2061 = {
 						CreatedOnToolsVersion = 15.2;
 					};
+					8F39C9952CFCBBE30065A830 = {
+						CreatedOnToolsVersion = 15.2;
+						TestTargetID = 8F08A4532CE323F2000D2061;
+					};
 				};
 			};
 			buildConfigurationList = 8F08A44F2CE323F2000D2061 /* Build configuration list for PBXProject "Schedule" */;
@@ -111,11 +257,17 @@
 				Base,
 			);
 			mainGroup = 8F08A44B2CE323F2000D2061;
+			packageReferences = (
+				8F69FA7F2CF03FE30078C2A5 /* XCRemoteSwiftPackageReference "swift-openapi-generator" */,
+				8F69FA842CF040EC0078C2A5 /* XCRemoteSwiftPackageReference "swift-openapi-runtime" */,
+				8F69FA872CF041290078C2A5 /* XCRemoteSwiftPackageReference "swift-openapi-urlsession" */,
+			);
 			productRefGroup = 8F08A4552CE323F2000D2061 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
 				8F08A4532CE323F2000D2061 /* Schedule */,
+				8F39C9952CFCBBE30065A830 /* ScheduleTests */,
 			);
 		};
 /* End PBXProject section */
@@ -126,7 +278,16 @@
 			buildActionMask = 2147483647;
 			files = (
 				8F08A45F2CE323F4000D2061 /* Preview Assets.xcassets in Resources */,
+				8F69FA912CF044210078C2A5 /* openapi-generator-config.yaml in Resources */,
 				8F08A45C2CE323F4000D2061 /* Assets.xcassets in Resources */,
+				8F69FA8E2CF043BD0078C2A5 /* openapi.yaml in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		8F39C9942CFCBBE30065A830 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -137,12 +298,45 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8FF0657F2CF3306C00347B67 /* CarrierService.swift in Sources */,
+				8FF0658D2CF43C0300347B67 /* StationsListService.swift in Sources */,
 				8F08A45A2CE323F2000D2061 /* ContentView.swift in Sources */,
+				8FF065792CF3046D00347B67 /* NearestSettlementService.swift in Sources */,
+				8F69FA952CF051020078C2A5 /* NearestStationsService.swift in Sources */,
+				8FF0657C2CF325DD00347B67 /* ClientFactory.swift in Sources */,
+				8FF065822CF385C500347B67 /* ScheduleBetweenStationsService.swift in Sources */,
 				8F08A4582CE323F2000D2061 /* ScheduleApp.swift in Sources */,
+				8F69FA992CF0551D0078C2A5 /* Constants.swift in Sources */,
+				8FF065862CF39E0C00347B67 /* ScheduleForStationService.swift in Sources */,
+				8F39C9902CFCB6520065A830 /* NetworkManager.swift in Sources */,
+				8F39C98C2CFCAD540065A830 /* AuthenticationMiddleware.swift in Sources */,
+				8FF065892CF3AC9A00347B67 /* ScheduleThreadService.swift in Sources */,
+				8F44C22B2CF599DB00663D7A /* CopyrightService.swift in Sources */,
+				8F39C9A32CFCBD4E0065A830 /* ServiceManager.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		8F39C9922CFCBBE30065A830 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8F39C9A12CFCBC140065A830 /* ServicesTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		8F39C99B2CFCBBE30065A830 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 8F08A4532CE323F2000D2061 /* Schedule */;
+			targetProxy = 8F39C99A2CFCBBE30065A830 /* PBXContainerItemProxy */;
+		};
+		8F69FA8B2CF041BF0078C2A5 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			productRef = 8F69FA8A2CF041BF0078C2A5 /* OpenAPIGenerator */;
+		};
+/* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
 		8F08A4602CE323F4000D2061 /* Debug */ = {
@@ -197,7 +391,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
 				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
@@ -254,7 +448,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
 				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
@@ -330,6 +524,44 @@
 			};
 			name = Release;
 		};
+		8F39C99D2CFCBBE30065A830 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = SS97497NM5;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.apolm.ScheduleTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Schedule.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/Schedule";
+			};
+			name = Debug;
+		};
+		8F39C99E2CFCBBE30065A830 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = SS97497NM5;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.apolm.ScheduleTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Schedule.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/Schedule";
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -351,7 +583,61 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
+		8F39C99C2CFCBBE30065A830 /* Build configuration list for PBXNativeTarget "ScheduleTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				8F39C99D2CFCBBE30065A830 /* Debug */,
+				8F39C99E2CFCBBE30065A830 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		8F69FA7F2CF03FE30078C2A5 /* XCRemoteSwiftPackageReference "swift-openapi-generator" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/apple/swift-openapi-generator";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 1.4.0;
+			};
+		};
+		8F69FA842CF040EC0078C2A5 /* XCRemoteSwiftPackageReference "swift-openapi-runtime" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/apple/swift-openapi-runtime";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 1.6.0;
+			};
+		};
+		8F69FA872CF041290078C2A5 /* XCRemoteSwiftPackageReference "swift-openapi-urlsession" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/apple/swift-openapi-urlsession";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 1.0.2;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		8F69FA852CF040EC0078C2A5 /* OpenAPIRuntime */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 8F69FA842CF040EC0078C2A5 /* XCRemoteSwiftPackageReference "swift-openapi-runtime" */;
+			productName = OpenAPIRuntime;
+		};
+		8F69FA882CF041290078C2A5 /* OpenAPIURLSession */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 8F69FA872CF041290078C2A5 /* XCRemoteSwiftPackageReference "swift-openapi-urlsession" */;
+			productName = OpenAPIURLSession;
+		};
+		8F69FA8A2CF041BF0078C2A5 /* OpenAPIGenerator */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 8F69FA7F2CF03FE30078C2A5 /* XCRemoteSwiftPackageReference "swift-openapi-generator" */;
+			productName = "plugin:OpenAPIGenerator";
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 8F08A44C2CE323F2000D2061 /* Project object */;
 }
