@@ -10,8 +10,7 @@ protocol ScheduleThreadServiceProtocol {
 final class ScheduleThreadService: ScheduleThreadServiceProtocol {
     private let client: Client
     
-    init?() {
-        guard let client = ClientFactory.createClient() else { return nil }
+    init(client: Client) {
         self.client = client
     }
     

@@ -25,7 +25,8 @@ struct ContentView: View {
 
 extension ContentView {
     func scheduleBetweenStations() async {
-        guard let service = ScheduleBetweenStationsService() else { return }
+        guard let client = NetworkManager.shared?.client else { return }
+        let service = ScheduleBetweenStationsService(client: client)
         
         do {
             let schedule = try await service.getScheduleBetweenStations(from: "c146", to: "c213")
@@ -36,7 +37,8 @@ extension ContentView {
     }
     
     func scheduleForStation() async {
-        guard let service = ScheduleForStationService() else { return }
+        guard let client = NetworkManager.shared?.client else { return }
+        let service = ScheduleForStationService(client: client)
         
         do {
             let schedule = try await service.getScheduleForStation("s9600213")
@@ -47,7 +49,8 @@ extension ContentView {
     }
     
     func scheduleThread() async {
-        guard let service = ScheduleThreadService() else { return }
+        guard let client = NetworkManager.shared?.client else { return }
+        let service = ScheduleThreadService(client: client)
         
         do {
             let scheduleThread = try await service.getThread(uid: "SU-1524_250111_c26_12")
@@ -58,7 +61,8 @@ extension ContentView {
     }
     
     func stations() async {
-        guard let service = NearestStationsService() else { return }
+        guard let client = NetworkManager.shared?.client else { return }
+        let service = NearestStationsService(client: client)
         
         do {
             let stations = try await service.getNearestStations(
@@ -73,7 +77,8 @@ extension ContentView {
     }
     
     func settlement() async {
-        guard let service = NearestSettlementService() else { return }
+        guard let client = NetworkManager.shared?.client else { return }
+        let service = NearestSettlementService(client: client)
         
         do {
             let settlement = try await service.getNearestSettlement(
@@ -88,7 +93,8 @@ extension ContentView {
     }
     
     func carrier() async {
-        guard let service = CarrierService() else { return }
+        guard let client = NetworkManager.shared?.client else { return }
+        let service = CarrierService(client: client)
         
         do {
             let carrier = try await service.getCarrier(code: "26")
@@ -99,7 +105,8 @@ extension ContentView {
     }
     
     func stationsList() async {
-        guard let service = StationsListService() else { return }
+        guard let client = NetworkManager.shared?.client else { return }
+        let service = StationsListService(client: client)
         
         do {
             let stationsList = try await service.getStationsList()
@@ -110,7 +117,8 @@ extension ContentView {
     }
     
     func copyright() async {
-        guard let service = CopyrightService() else { return }
+        guard let client = NetworkManager.shared?.client else { return }
+        let service = CopyrightService(client: client)
         
         do {
             let copyrightInfo = try await service.getCopyright()

@@ -1,7 +1,4 @@
 import OpenAPIURLSession
-import OpenAPIRuntime
-import Foundation
-import HTTPTypes
 
 struct ClientFactory {
     static func createClient() -> Client? {
