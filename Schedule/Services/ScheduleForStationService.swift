@@ -17,7 +17,6 @@ final class ScheduleForStationService: ScheduleForStationServiceProtocol {
     
     func getScheduleForStation(_ station: String) async throws -> ScheduleForStation {
         let response = try await client.getScheduleForStation(query: .init(
-            apikey: Constants.apiKey,
             station: station
         ))
         return try response.ok.body.json

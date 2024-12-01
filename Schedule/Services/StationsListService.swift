@@ -17,9 +17,7 @@ final class StationsListService: StationsListServiceProtocol {
     }
     
     func getStationsList() async throws -> StationsList {
-        let response = try await client.getStationsList(query: .init(
-            apikey: Constants.apiKey
-        ))
+        let response = try await client.getStationsList(query: .init())
                 
         let data = try await Data(collecting: response.ok.body.html, upTo: 1024 * 1024 * 100)
         let stationsList = try JSONDecoder().decode(StationsList.self, from: data)

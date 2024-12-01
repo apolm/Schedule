@@ -17,7 +17,6 @@ final class NearestSettlementService: NearestSettlementServiceProtocol {
     
     func getNearestSettlement(lat: Double, lng: Double, distance: Int) async throws -> NearestSettlement {
         let response = try await client.getNearestSettlement(query: .init(
-            apikey: Constants.apiKey,
             lat: lat,
             lng: lng,
             distance: distance

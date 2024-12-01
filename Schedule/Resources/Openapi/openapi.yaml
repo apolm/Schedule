@@ -32,7 +32,7 @@ paths:
       parameters:
       - name: apikey
         in: query
-        required: true
+        required: false
         description: Access key to the API. Can also be provided in the Authorization header.
         schema:
           type: string
@@ -319,7 +319,7 @@ paths:
       - name: apikey
         in: query
         description: API key
-        required: true
+        required: false
         schema:
           type: string
       - name: lat
@@ -369,7 +369,7 @@ paths:
       - name: apikey
         in: query
         description: API key
-        required: true
+        required: false
         schema:
           type: string
       - name: lat
@@ -412,7 +412,7 @@ paths:
       parameters:
       - name: apikey
         in: query
-        required: true
+        required: false
         description: API key for access
         schema:
           type: string
@@ -456,7 +456,7 @@ paths:
       parameters:
       - name: apikey
         in: query
-        required: true
+        required: false
         description: API key for access
         schema:
           type: string
@@ -488,7 +488,7 @@ paths:
       parameters:
       - name: apikey
         in: query
-        required: true
+        required: false
         description: API key for access
         schema:
           type: string

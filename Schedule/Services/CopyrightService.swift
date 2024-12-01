@@ -20,9 +20,7 @@ final class CopyrightService: CopyrightServiceProtocol {
     }
     
     func getCopyright() async throws -> Copyright {
-        let response = try await client.getCopyright(query: .init(
-            apikey: Constants.apiKey
-        ))
+        let response = try await client.getCopyright(query: .init())
         guard let copyright = try response.ok.body.json.copyright else {
             throw CopyrightServiceError.missingCopyright
         }

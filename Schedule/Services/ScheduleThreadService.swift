@@ -17,7 +17,6 @@ final class ScheduleThreadService: ScheduleThreadServiceProtocol {
     
     func getThread(uid: String) async throws -> ScheduleThread {
         let response = try await client.getThread(query: .init(
-            apikey: Constants.apiKey,
             uid: uid
         ))
         return try response.ok.body.json
