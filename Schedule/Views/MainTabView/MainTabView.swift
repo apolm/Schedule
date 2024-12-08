@@ -3,7 +3,7 @@ import SwiftUI
 struct MainTabView: View {
     var body: some View {
         TabView {
-            Color.ypWhite
+            TestView()
                 .tabItem {
                     Image(Assets.tabSchedule)
                         .renderingMode(.template)

@@ -17,6 +17,20 @@
 		8F44C22B2CF599DB00663D7A /* CopyrightService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F44C22A2CF599DB00663D7A /* CopyrightService.swift */; };
 		8F4E03002D04C232000615C1 /* UITabBar+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F4E02FF2D04C232000615C1 /* UITabBar+Extensions.swift */; };
 		8F4E030D2D0578B3000615C1 /* Assets.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F4E030C2D0578B3000615C1 /* Assets.swift */; };
+		8F4E03102D0580DA000615C1 /* ScheduleSearchView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F4E030F2D0580DA000615C1 /* ScheduleSearchView.swift */; };
+		8F4E03132D05829A000615C1 /* TestView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F4E03122D05829A000615C1 /* TestView.swift */; };
+		8F4E03172D059B2C000615C1 /* Station.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F4E03162D059B2C000615C1 /* Station.swift */; };
+		8F4E031A2D059C5A000615C1 /* Settlement.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F4E03192D059C5A000615C1 /* Settlement.swift */; };
+		8F4E031E2D05CB7D000615C1 /* SettlementListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F4E031D2D05CB7C000615C1 /* SettlementListViewModel.swift */; };
+		8F4E03202D05CB88000615C1 /* SettlementListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F4E031F2D05CB88000615C1 /* SettlementListView.swift */; };
+		8F4E03302D060F4A000615C1 /* DataConverter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F4E032F2D060F4A000615C1 /* DataConverter.swift */; };
+		8F4E03342D061DC4000615C1 /* DataProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F4E03332D061DC4000615C1 /* DataProvider.swift */; };
+		8F4E03382D06202D000615C1 /* DataProviderProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F4E03372D06202D000615C1 /* DataProviderProtocol.swift */; };
+		8F4E033A2D062061000615C1 /* MockDataProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F4E03392D062061000615C1 /* MockDataProvider.swift */; };
+		8F4E03432D062234000615C1 /* View+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F4E03422D062234000615C1 /* View+Extensions.swift */; };
+		8F4E03482D0626C2000615C1 /* ScheduleSearchViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F4E03472D0626C2000615C1 /* ScheduleSearchViewModel.swift */; };
+		8F4E034C2D0630C2000615C1 /* DestinationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F4E034B2D0630C2000615C1 /* DestinationView.swift */; };
+		8F4E034F2D0630D0000615C1 /* DestinationViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F4E034E2D0630D0000615C1 /* DestinationViewModel.swift */; };
 		8F69FA862CF040EC0078C2A5 /* OpenAPIRuntime in Frameworks */ = {isa = PBXBuildFile; productRef = 8F69FA852CF040EC0078C2A5 /* OpenAPIRuntime */; };
 		8F69FA892CF041290078C2A5 /* OpenAPIURLSession in Frameworks */ = {isa = PBXBuildFile; productRef = 8F69FA882CF041290078C2A5 /* OpenAPIURLSession */; };
 		8F69FA8E2CF043BD0078C2A5 /* openapi.yaml in Resources */ = {isa = PBXBuildFile; fileRef = 8F69FA8D2CF043BD0078C2A5 /* openapi.yaml */; };
@@ -56,6 +70,20 @@
 		8F44C22A2CF599DB00663D7A /* CopyrightService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CopyrightService.swift; sourceTree = "<group>"; };
 		8F4E02FF2D04C232000615C1 /* UITabBar+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UITabBar+Extensions.swift"; sourceTree = "<group>"; };
 		8F4E030C2D0578B3000615C1 /* Assets.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Assets.swift; sourceTree = "<group>"; };
+		8F4E030F2D0580DA000615C1 /* ScheduleSearchView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScheduleSearchView.swift; sourceTree = "<group>"; };
+		8F4E03122D05829A000615C1 /* TestView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestView.swift; sourceTree = "<group>"; };
+		8F4E03162D059B2C000615C1 /* Station.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Station.swift; sourceTree = "<group>"; };
+		8F4E03192D059C5A000615C1 /* Settlement.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Settlement.swift; sourceTree = "<group>"; };
+		8F4E031D2D05CB7C000615C1 /* SettlementListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettlementListViewModel.swift; sourceTree = "<group>"; };
+		8F4E031F2D05CB88000615C1 /* SettlementListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettlementListView.swift; sourceTree = "<group>"; };
+		8F4E032F2D060F4A000615C1 /* DataConverter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataConverter.swift; sourceTree = "<group>"; };
+		8F4E03332D061DC4000615C1 /* DataProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataProvider.swift; sourceTree = "<group>"; };
+		8F4E03372D06202D000615C1 /* DataProviderProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataProviderProtocol.swift; sourceTree = "<group>"; };
+		8F4E03392D062061000615C1 /* MockDataProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockDataProvider.swift; sourceTree = "<group>"; };
+		8F4E03422D062234000615C1 /* View+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "View+Extensions.swift"; sourceTree = "<group>"; };
+		8F4E03472D0626C2000615C1 /* ScheduleSearchViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScheduleSearchViewModel.swift; sourceTree = "<group>"; };
+		8F4E034B2D0630C2000615C1 /* DestinationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DestinationView.swift; sourceTree = "<group>"; };
+		8F4E034E2D0630D0000615C1 /* DestinationViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DestinationViewModel.swift; sourceTree = "<group>"; };
 		8F69FA8D2CF043BD0078C2A5 /* openapi.yaml */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.yaml; path = openapi.yaml; sourceTree = "<group>"; };
 		8F69FA902CF044210078C2A5 /* openapi-generator-config.yaml */ = {isa = PBXFileReference; lastKnownFileType = text.yaml; path = "openapi-generator-config.yaml"; sourceTree = "<group>"; };
 		8F69FA942CF051020078C2A5 /* NearestStationsService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NearestStationsService.swift; sourceTree = "<group>"; };
@@ -113,7 +141,9 @@
 			children = (
 				8F08A4572CE323F2000D2061 /* ScheduleApp.swift */,
 				8F69FA972CF054E40078C2A5 /* CommonObjects */,
+				8F4E03362D061FFB000615C1 /* DataProvider */,
 				8F4E03022D04CB29000615C1 /* Extensions */,
+				8F4E03152D059AF1000615C1 /* Model */,
 				8F08A45D2CE323F4000D2061 /* Preview Content */,
 				8F69FA8C2CF043530078C2A5 /* Resources */,
 				8F69FA932CF050960078C2A5 /* Services */,
@@ -142,8 +172,65 @@
 			isa = PBXGroup;
 			children = (
 				8F4E02FF2D04C232000615C1 /* UITabBar+Extensions.swift */,
+				8F4E03422D062234000615C1 /* View+Extensions.swift */,
 			);
 			path = Extensions;
+			sourceTree = "<group>";
+		};
+		8F4E03152D059AF1000615C1 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				8F4E03192D059C5A000615C1 /* Settlement.swift */,
+				8F4E03162D059B2C000615C1 /* Station.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		8F4E031C2D05CB11000615C1 /* SettlementList */ = {
+			isa = PBXGroup;
+			children = (
+				8F4E031F2D05CB88000615C1 /* SettlementListView.swift */,
+				8F4E031D2D05CB7C000615C1 /* SettlementListViewModel.swift */,
+			);
+			path = SettlementList;
+			sourceTree = "<group>";
+		};
+		8F4E03362D061FFB000615C1 /* DataProvider */ = {
+			isa = PBXGroup;
+			children = (
+				8F4E032F2D060F4A000615C1 /* DataConverter.swift */,
+				8F4E03332D061DC4000615C1 /* DataProvider.swift */,
+				8F4E03372D06202D000615C1 /* DataProviderProtocol.swift */,
+				8F4E03392D062061000615C1 /* MockDataProvider.swift */,
+			);
+			path = DataProvider;
+			sourceTree = "<group>";
+		};
+		8F4E033C2D0621C4000615C1 /* MainTabView */ = {
+			isa = PBXGroup;
+			children = (
+				8F7B1B5F2D02BD3600F0D5DB /* MainTabView.swift */,
+			);
+			path = MainTabView;
+			sourceTree = "<group>";
+		};
+		8F4E03402D0621DD000615C1 /* ScheduleSearchView */ = {
+			isa = PBXGroup;
+			children = (
+				8F4E034A2D0630AE000615C1 /* DestinationView */,
+				8F4E030F2D0580DA000615C1 /* ScheduleSearchView.swift */,
+				8F4E03472D0626C2000615C1 /* ScheduleSearchViewModel.swift */,
+			);
+			path = ScheduleSearchView;
+			sourceTree = "<group>";
+		};
+		8F4E034A2D0630AE000615C1 /* DestinationView */ = {
+			isa = PBXGroup;
+			children = (
+				8F4E034B2D0630C2000615C1 /* DestinationView.swift */,
+				8F4E034E2D0630D0000615C1 /* DestinationViewModel.swift */,
+			);
+			path = DestinationView;
 			sourceTree = "<group>";
 		};
 		8F69FA8C2CF043530078C2A5 /* Resources */ = {
@@ -192,7 +279,10 @@
 		8F7B1B5E2D02BBE900F0D5DB /* Views */ = {
 			isa = PBXGroup;
 			children = (
-				8F7B1B5F2D02BD3600F0D5DB /* MainTabView.swift */,
+				8F4E033C2D0621C4000615C1 /* MainTabView */,
+				8F4E03402D0621DD000615C1 /* ScheduleSearchView */,
+				8F4E031C2D05CB11000615C1 /* SettlementList */,
+				8F4E03122D05829A000615C1 /* TestView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -327,14 +417,28 @@
 				8F69FA952CF051020078C2A5 /* NearestStationsService.swift in Sources */,
 				8FF0657C2CF325DD00347B67 /* ClientFactory.swift in Sources */,
 				8FF065822CF385C500347B67 /* ScheduleBetweenStationsService.swift in Sources */,
+				8F4E034F2D0630D0000615C1 /* DestinationViewModel.swift in Sources */,
 				8F4E030D2D0578B3000615C1 /* Assets.swift in Sources */,
+				8F4E03382D06202D000615C1 /* DataProviderProtocol.swift in Sources */,
 				8F08A4582CE323F2000D2061 /* ScheduleApp.swift in Sources */,
+				8F4E03432D062234000615C1 /* View+Extensions.swift in Sources */,
+				8F4E031E2D05CB7D000615C1 /* SettlementListViewModel.swift in Sources */,
+				8F4E033A2D062061000615C1 /* MockDataProvider.swift in Sources */,
 				8F69FA992CF0551D0078C2A5 /* Constants.swift in Sources */,
+				8F4E031A2D059C5A000615C1 /* Settlement.swift in Sources */,
 				8FF065862CF39E0C00347B67 /* ScheduleForStationService.swift in Sources */,
 				8F4E03002D04C232000615C1 /* UITabBar+Extensions.swift in Sources */,
+				8F4E03172D059B2C000615C1 /* Station.swift in Sources */,
 				8F39C9902CFCB6520065A830 /* NetworkManager.swift in Sources */,
+				8F4E03102D0580DA000615C1 /* ScheduleSearchView.swift in Sources */,
+				8F4E03342D061DC4000615C1 /* DataProvider.swift in Sources */,
 				8F39C98C2CFCAD540065A830 /* AuthenticationMiddleware.swift in Sources */,
+				8F4E03132D05829A000615C1 /* TestView.swift in Sources */,
 				8FF065892CF3AC9A00347B67 /* ScheduleThreadService.swift in Sources */,
+				8F4E03302D060F4A000615C1 /* DataConverter.swift in Sources */,
+				8F4E03482D0626C2000615C1 /* ScheduleSearchViewModel.swift in Sources */,
+				8F4E03202D05CB88000615C1 /* SettlementListView.swift in Sources */,
+				8F4E034C2D0630C2000615C1 /* DestinationView.swift in Sources */,
 				8F44C22B2CF599DB00663D7A /* CopyrightService.swift in Sources */,
 				8F39C9A32CFCBD4E0065A830 /* ServiceManager.swift in Sources */,
 			);
