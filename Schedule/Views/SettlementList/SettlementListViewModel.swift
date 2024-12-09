@@ -6,11 +6,12 @@ final class SettlementListViewModel: ObservableObject {
     @Published private(set) var loadingFailed = false
     
     private let dataProvider: DataProviderProtocol
-        
+    
     init(dataProvider: DataProviderProtocol = DataProvider.shared) {
         self.dataProvider = dataProvider
     }
     
+    @MainActor
     func fetchSettlements() async {
         isLoading = true
         loadingFailed = false

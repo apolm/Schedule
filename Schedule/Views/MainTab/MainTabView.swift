@@ -3,11 +3,16 @@ import SwiftUI
 struct MainTabView: View {
     var body: some View {
         TabView {
-            TestView()
-                .tabItem {
-                    Image(Assets.tabSchedule)
-                        .renderingMode(.template)
-                }
+            VStack {
+                ScheduleSearchView(viewModel: ScheduleSearchViewModel())
+                    .padding(16)
+                
+                Spacer()
+            }
+            .tabItem {
+                Image(Assets.tabSchedule)
+                    .renderingMode(.template)
+            }
             
             Color.orange
                 .tabItem {

@@ -14,6 +14,7 @@ final class DataProvider: DataProviderProtocol {
         
         let response = try await ServiceManager.shared.getStationsList()
         let convertedSettlements = try converter.convertSettlements(from: response)
+        settlements = convertedSettlements
         return convertedSettlements
     }
 }

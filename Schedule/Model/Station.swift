@@ -1,5 +1,6 @@
 import Foundation
 
-struct Station {
+struct Station: Identifiable {
+    let id = UUID()
     let title: String
 }
