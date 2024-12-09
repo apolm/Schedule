@@ -217,9 +217,9 @@
 		8F4E03402D0621DD000615C1 /* ScheduleSearchView */ = {
 			isa = PBXGroup;
 			children = (
-				8F4E034A2D0630AE000615C1 /* DestinationView */,
 				8F4E030F2D0580DA000615C1 /* ScheduleSearchView.swift */,
 				8F4E03472D0626C2000615C1 /* ScheduleSearchViewModel.swift */,
+				8F4E034A2D0630AE000615C1 /* DestinationView */,
 			);
 			path = ScheduleSearchView;
 			sourceTree = "<group>";

@@ -8,21 +8,35 @@ struct DestinationView: View {
         VStack {
             if let station = viewModel.station {
                 Text(station.title)
-                    .foregroundColor(.black)
+                    .foregroundColor(.ypBlackUniversal)
                     .font(.body)
                     .frame(maxWidth: .infinity, alignment: .leading)
             } else {
                 Text(placeholder)
-                    .foregroundColor(.gray)
+                    .foregroundColor(.ypGray)
                     .font(.body)
                     .frame(maxWidth: .infinity, alignment: .leading)
             }
         }
         .padding(14)
-        .background(Color.white)
+        .background(.ypWhiteUniversal)
     }
 }
 
 #Preview {
-    DestinationView(viewModel: DestinationViewModel(), placeholder: "Откуда")
+    VStack {
+        DestinationView(
+            viewModel: DestinationViewModel(),
+            placeholder: "Откуда"
+        )
+        
+        DestinationView(
+            viewModel: DestinationViewModel(
+                station: Station(
+                    title: "Шереметьево"
+                )
+            ),
+            placeholder: "Куда"
+        )
+    }
 }

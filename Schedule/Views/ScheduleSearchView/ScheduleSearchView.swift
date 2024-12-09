@@ -20,13 +20,13 @@ struct ScheduleSearchView: View {
             }) {
                 Image(Assets.changeDirection)
                     .frame(width: 36, height: 36)
-                    .background(Color.white)
+                    .background(.ypWhiteUniversal)
                     .clipShape(Circle())
             }
         }
         .padding(16)
         .background(.ypBlue)
-        .cornerRadius(20)
+        .clipShape(RoundedRectangle(cornerRadius: 20))
     }
 }
 
