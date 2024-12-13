@@ -8,7 +8,7 @@ extension View {
                 ToolbarItem(placement: .principal) {
                     Text(title)
                         .fontWeight(.bold)
-                        .foregroundColor(.ypBlack)
+                        .foregroundStyle(.ypBlack)
                 }
                 ToolbarItem(placement: .navigationBarLeading) {
                     Button(action: {

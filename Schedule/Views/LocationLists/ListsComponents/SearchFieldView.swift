@@ -7,12 +7,12 @@ struct SearchFieldView: View {
     var body: some View {
         HStack(spacing: 4) {
             Image(systemName: "magnifyingglass")
-                .foregroundColor(.ypGrayUniversal)
+                .foregroundStyle(.ypGrayUniversal)
             
             TextField("", text: $searchText)
                 .focused($isFocused)
                 .autocorrectionDisabled()
-                .foregroundStyle(.ypBlack)
+                .commonTextStyle()
                 .placeholder(when: searchText.isEmpty) {
                     Text("Введите запрос")
                         .foregroundStyle(.ypGrayUniversal)
@@ -23,7 +23,7 @@ struct SearchFieldView: View {
                     searchText = ""
                 } label: {
                     Image(systemName: "xmark.circle.fill")
-                        .foregroundColor(.ypGrayUniversal)
+                        .foregroundStyle(.ypGrayUniversal)
                 }
             }
         }

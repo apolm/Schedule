@@ -8,6 +8,7 @@ struct EmptySearchResultsView: View {
         
         Text(message)
             .font(.system(size: 24, weight: .bold))
+            .foregroundStyle(.ypBlack)
             .padding()
                 
         Spacer()

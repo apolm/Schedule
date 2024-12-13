@@ -13,7 +13,7 @@ struct SettlementListView: View {
                 if viewModel.isLoading {
                     ProgressView()
                 } else if viewModel.loadingFailed {
-                    Text("error").foregroundColor(.red) // TODO - Show error View
+                    Text("error").foregroundStyle(.red) // TODO - Show error View
                 } else {
                     VStack {
                         SearchFieldView(searchText: $viewModel.searchText)

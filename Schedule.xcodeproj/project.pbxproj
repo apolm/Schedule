@@ -42,6 +42,7 @@
 		8F77356D2D0BF18400583B36 /* EmptySearchResultsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F77356C2D0BF18400583B36 /* EmptySearchResultsView.swift */; };
 		8F7735752D0BFD8E00583B36 /* TitledItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F7735742D0BFD8E00583B36 /* TitledItem.swift */; };
 		8F7735772D0BFE5E00583B36 /* LocationRowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F7735762D0BFE5E00583B36 /* LocationRowView.swift */; };
+		8F77357A2D0C0A6700583B36 /* CommonTextStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F7735792D0C0A6700583B36 /* CommonTextStyle.swift */; };
 		8F7B1B602D02BD3600F0D5DB /* MainTabView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F7B1B5F2D02BD3600F0D5DB /* MainTabView.swift */; };
 		8FBB29D92D0957A600A9ABDD /* SearchFieldView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8FBB29D82D0957A600A9ABDD /* SearchFieldView.swift */; };
 		8FF065792CF3046D00347B67 /* NearestSettlementService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8FF065782CF3046D00347B67 /* NearestSettlementService.swift */; };
@@ -99,6 +100,7 @@
 		8F77356C2D0BF18400583B36 /* EmptySearchResultsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmptySearchResultsView.swift; sourceTree = "<group>"; };
 		8F7735742D0BFD8E00583B36 /* TitledItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TitledItem.swift; sourceTree = "<group>"; };
 		8F7735762D0BFE5E00583B36 /* LocationRowView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationRowView.swift; sourceTree = "<group>"; };
+		8F7735792D0C0A6700583B36 /* CommonTextStyle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommonTextStyle.swift; sourceTree = "<group>"; };
 		8F7B1B5F2D02BD3600F0D5DB /* MainTabView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTabView.swift; sourceTree = "<group>"; };
 		8FBB29D82D0957A600A9ABDD /* SearchFieldView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchFieldView.swift; sourceTree = "<group>"; };
 		8FF065782CF3046D00347B67 /* NearestSettlementService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NearestSettlementService.swift; sourceTree = "<group>"; };
@@ -293,6 +295,7 @@
 			isa = PBXGroup;
 			children = (
 				8F4E030C2D0578B3000615C1 /* Assets.swift */,
+				8F7735792D0C0A6700583B36 /* CommonTextStyle.swift */,
 				8F69FA982CF0551D0078C2A5 /* Constants.swift */,
 			);
 			path = Common;
@@ -483,6 +486,7 @@
 				8F39C98C2CFCAD540065A830 /* AuthenticationMiddleware.swift in Sources */,
 				8F4E03132D05829A000615C1 /* TestView.swift in Sources */,
 				8FF065892CF3AC9A00347B67 /* ScheduleThreadService.swift in Sources */,
+				8F77357A2D0C0A6700583B36 /* CommonTextStyle.swift in Sources */,
 				8F4E03302D060F4A000615C1 /* DataConverter.swift in Sources */,
 				8F4E03482D0626C2000615C1 /* ScheduleSearchViewModel.swift in Sources */,
 				8F4E03202D05CB88000615C1 /* SettlementListView.swift in Sources */,

@@ -8,6 +8,7 @@ struct LocationRowView<T: TitledItem>: View {
         Button(action: action) {
             HStack {
                 Text(item.title)
+                    .commonTextStyle()
                 Spacer()
                 Image(Assets.chevron)
                     .renderingMode(.template)

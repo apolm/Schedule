@@ -8,11 +8,11 @@ struct DestinationView: View {
         VStack {
             if let station = viewModel.station {
                 Text(station.title)
-                    .foregroundColor(.ypBlackUniversal)
+                    .foregroundStyle(.ypBlackUniversal)
                     .frame(maxWidth: .infinity, alignment: .leading)
             } else {
                 Text(placeholder)
-                    .foregroundColor(.ypGrayUniversal)
+                    .foregroundStyle(.ypGrayUniversal)
                     .frame(maxWidth: .infinity, alignment: .leading)
             }
         }
