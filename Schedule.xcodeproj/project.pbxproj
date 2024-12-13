@@ -39,7 +39,11 @@
 		8F69FA912CF044210078C2A5 /* openapi-generator-config.yaml in Resources */ = {isa = PBXBuildFile; fileRef = 8F69FA902CF044210078C2A5 /* openapi-generator-config.yaml */; };
 		8F69FA952CF051020078C2A5 /* NearestStationsService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F69FA942CF051020078C2A5 /* NearestStationsService.swift */; };
 		8F69FA992CF0551D0078C2A5 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F69FA982CF0551D0078C2A5 /* Constants.swift */; };
+		8F77356D2D0BF18400583B36 /* EmptySearchResultsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F77356C2D0BF18400583B36 /* EmptySearchResultsView.swift */; };
+		8F7735752D0BFD8E00583B36 /* TitledItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F7735742D0BFD8E00583B36 /* TitledItem.swift */; };
+		8F7735772D0BFE5E00583B36 /* LocationRowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F7735762D0BFE5E00583B36 /* LocationRowView.swift */; };
 		8F7B1B602D02BD3600F0D5DB /* MainTabView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F7B1B5F2D02BD3600F0D5DB /* MainTabView.swift */; };
+		8FBB29D92D0957A600A9ABDD /* SearchFieldView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8FBB29D82D0957A600A9ABDD /* SearchFieldView.swift */; };
 		8FF065792CF3046D00347B67 /* NearestSettlementService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8FF065782CF3046D00347B67 /* NearestSettlementService.swift */; };
 		8FF0657C2CF325DD00347B67 /* ClientFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8FF0657B2CF325DD00347B67 /* ClientFactory.swift */; };
 		8FF0657F2CF3306C00347B67 /* CarrierService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8FF0657E2CF3306C00347B67 /* CarrierService.swift */; };
@@ -92,7 +96,11 @@
 		8F69FA902CF044210078C2A5 /* openapi-generator-config.yaml */ = {isa = PBXFileReference; lastKnownFileType = text.yaml; path = "openapi-generator-config.yaml"; sourceTree = "<group>"; };
 		8F69FA942CF051020078C2A5 /* NearestStationsService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NearestStationsService.swift; sourceTree = "<group>"; };
 		8F69FA982CF0551D0078C2A5 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		8F77356C2D0BF18400583B36 /* EmptySearchResultsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmptySearchResultsView.swift; sourceTree = "<group>"; };
+		8F7735742D0BFD8E00583B36 /* TitledItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TitledItem.swift; sourceTree = "<group>"; };
+		8F7735762D0BFE5E00583B36 /* LocationRowView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationRowView.swift; sourceTree = "<group>"; };
 		8F7B1B5F2D02BD3600F0D5DB /* MainTabView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTabView.swift; sourceTree = "<group>"; };
+		8FBB29D82D0957A600A9ABDD /* SearchFieldView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchFieldView.swift; sourceTree = "<group>"; };
 		8FF065782CF3046D00347B67 /* NearestSettlementService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NearestSettlementService.swift; sourceTree = "<group>"; };
 		8FF0657B2CF325DD00347B67 /* ClientFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClientFactory.swift; sourceTree = "<group>"; };
 		8FF0657E2CF3306C00347B67 /* CarrierService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CarrierService.swift; sourceTree = "<group>"; };
@@ -144,10 +152,10 @@
 			isa = PBXGroup;
 			children = (
 				8F08A4572CE323F2000D2061 /* ScheduleApp.swift */,
-				8F69FA972CF054E40078C2A5 /* CommonObjects */,
+				8F69FA972CF054E40078C2A5 /* Common */,
 				8F4E03362D061FFB000615C1 /* DataProvider */,
 				8F4E03022D04CB29000615C1 /* Extensions */,
-				8F4E03152D059AF1000615C1 /* Model */,
+				8F4E03152D059AF1000615C1 /* Models */,
 				8F08A45D2CE323F4000D2061 /* Preview Content */,
 				8F69FA8C2CF043530078C2A5 /* Resources */,
 				8F69FA932CF050960078C2A5 /* Services */,
@@ -190,13 +198,14 @@
 			path = Extensions;
 			sourceTree = "<group>";
 		};
-		8F4E03152D059AF1000615C1 /* Model */ = {
+		8F4E03152D059AF1000615C1 /* Models */ = {
 			isa = PBXGroup;
 			children = (
 				8F4E03192D059C5A000615C1 /* Settlement.swift */,
 				8F4E03162D059B2C000615C1 /* Station.swift */,
+				8F7735742D0BFD8E00583B36 /* TitledItem.swift */,
 			);
-			path = Model;
+			path = Models;
 			sourceTree = "<group>";
 		};
 		8F4E031C2D05CB11000615C1 /* SettlementList */ = {
@@ -280,25 +289,44 @@
 			path = Services;
 			sourceTree = "<group>";
 		};
-		8F69FA972CF054E40078C2A5 /* CommonObjects */ = {
+		8F69FA972CF054E40078C2A5 /* Common */ = {
 			isa = PBXGroup;
 			children = (
 				8F4E030C2D0578B3000615C1 /* Assets.swift */,
 				8F69FA982CF0551D0078C2A5 /* Constants.swift */,
 			);
-			path = CommonObjects;
+			path = Common;
 			sourceTree = "<group>";
 		};
 		8F7B1B5E2D02BBE900F0D5DB /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				8FBB29D52D0956F700A9ABDD /* LocationLists */,
 				8F4E033C2D0621C4000615C1 /* MainTab */,
 				8F4E03402D0621DD000615C1 /* ScheduleSearch */,
-				8F4E031C2D05CB11000615C1 /* SettlementList */,
-				8F2CAA422D07731A00E9EBFA /* StationList */,
 				8F4E03122D05829A000615C1 /* TestView.swift */,
 			);
 			path = Views;
+			sourceTree = "<group>";
+		};
+		8FBB29D52D0956F700A9ABDD /* LocationLists */ = {
+			isa = PBXGroup;
+			children = (
+				8FBB29D72D09572F00A9ABDD /* ListsComponents */,
+				8F4E031C2D05CB11000615C1 /* SettlementList */,
+				8F2CAA422D07731A00E9EBFA /* StationList */,
+			);
+			path = LocationLists;
+			sourceTree = "<group>";
+		};
+		8FBB29D72D09572F00A9ABDD /* ListsComponents */ = {
+			isa = PBXGroup;
+			children = (
+				8F77356C2D0BF18400583B36 /* EmptySearchResultsView.swift */,
+				8F7735762D0BFE5E00583B36 /* LocationRowView.swift */,
+				8FBB29D82D0957A600A9ABDD /* SearchFieldView.swift */,
+			);
+			path = ListsComponents;
 			sourceTree = "<group>";
 		};
 		8FF0657A2CF3259900347B67 /* Helpers */ = {
@@ -424,6 +452,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8F7735752D0BFD8E00583B36 /* TitledItem.swift in Sources */,
 				8FF0657F2CF3306C00347B67 /* CarrierService.swift in Sources */,
 				8FF0658D2CF43C0300347B67 /* StationsListService.swift in Sources */,
 				8F7B1B602D02BD3600F0D5DB /* MainTabView.swift in Sources */,
@@ -439,6 +468,8 @@
 				8F2CAA472D07738D00E9EBFA /* StationListViewModel.swift in Sources */,
 				8F4E03432D062234000615C1 /* View+Extensions.swift in Sources */,
 				8F4E031E2D05CB7D000615C1 /* SettlementListViewModel.swift in Sources */,
+				8F77356D2D0BF18400583B36 /* EmptySearchResultsView.swift in Sources */,
+				8FBB29D92D0957A600A9ABDD /* SearchFieldView.swift in Sources */,
 				8F4E033A2D062061000615C1 /* MockDataProvider.swift in Sources */,
 				8F69FA992CF0551D0078C2A5 /* Constants.swift in Sources */,
 				8F4E031A2D059C5A000615C1 /* Settlement.swift in Sources */,
@@ -447,6 +478,7 @@
 				8F4E03172D059B2C000615C1 /* Station.swift in Sources */,
 				8F39C9902CFCB6520065A830 /* NetworkManager.swift in Sources */,
 				8F4E03102D0580DA000615C1 /* ScheduleSearchView.swift in Sources */,
+				8F7735772D0BFE5E00583B36 /* LocationRowView.swift in Sources */,
 				8F4E03342D061DC4000615C1 /* DataProvider.swift in Sources */,
 				8F39C98C2CFCAD540065A830 /* AuthenticationMiddleware.swift in Sources */,
 				8F4E03132D05829A000615C1 /* TestView.swift in Sources */,

@@ -1,17 +1,23 @@
 import SwiftUI
 
 extension View {
-    func cornerRadius(_ radius: CGFloat, corners: UIRectCorner) -> some View {
-        clipShape(RoundedCornerShape(corners: corners, radius: radius))
-    }
-}
-
-struct RoundedCornerShape: Shape {
-    var corners: UIRectCorner
-    var radius: CGFloat
-
-    func path(in rect: CGRect) -> Path {
-        let path = UIBezierPath(roundedRect: rect, byRoundingCorners: corners, cornerRadii: CGSize(width: radius, height: radius))
-        return Path(path.cgPath)
+    func navigationToolbar(title: String, presentationMode: Binding<PresentationMode>) -> some View {
+        self.navigationBarTitleDisplayMode(.inline)
+            .navigationBarBackButtonHidden(true)
+            .toolbar {
+                ToolbarItem(placement: .principal) {
+                    Text(title)
+                        .fontWeight(.bold)
+                        .foregroundColor(.ypBlack)
+                }
+                ToolbarItem(placement: .navigationBarLeading) {
+                    Button(action: {
+                        presentationMode.wrappedValue.dismiss()
+                    }) {
+                        Image(Assets.chevronLeft)
+                            .renderingMode(.template)
+                    }
+                }
+            }
     }
 }

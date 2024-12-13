@@ -9,12 +9,10 @@ struct DestinationView: View {
             if let station = viewModel.station {
                 Text(station.title)
                     .foregroundColor(.ypBlackUniversal)
-                    .font(.body)
                     .frame(maxWidth: .infinity, alignment: .leading)
             } else {
                 Text(placeholder)
-                    .foregroundColor(.ypGray)
-                    .font(.body)
+                    .foregroundColor(.ypGrayUniversal)
                     .frame(maxWidth: .infinity, alignment: .leading)
             }
         }

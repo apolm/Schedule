@@ -4,7 +4,7 @@ struct StationListView: View {
     @Environment(\.presentationMode) var presentationMode
     @StateObject var viewModel: StationListViewModel
     var onStationSelected: (Station) -> Void
-
+    
     var body: some View {
         VStack {
             List(viewModel.stations) { station in
@@ -16,6 +16,6 @@ struct StationListView: View {
                 }
             }
         }
-        .navigationTitle("Выбор станции")
+        .navigationToolbar(title: "Выбор станции", presentationMode: presentationMode)
     }
 }
