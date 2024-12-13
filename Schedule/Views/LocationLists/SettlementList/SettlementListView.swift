@@ -3,7 +3,6 @@ import SwiftUI
 struct SettlementListView: View {
     @Environment(\.presentationMode) var presentationMode
     @StateObject var viewModel: SettlementListViewModel
-    @State private var searchText: String = ""
     @State private var path = NavigationPath()
     
     var onStationSelected: (SelectedStation) -> Void
