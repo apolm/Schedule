@@ -1,13 +1,13 @@
 import SwiftUI
 
 struct DestinationView: View {
-    @ObservedObject var viewModel: DestinationViewModel
+    let title: String?
     let placeholder: String
 
     var body: some View {
         VStack {
-            if let station = viewModel.station {
-                Text(station.title)
+            if let title = title {
+                Text(title)
                     .foregroundStyle(.ypBlackUniversal)
                     .frame(maxWidth: .infinity, alignment: .leading)
             } else {
@@ -24,16 +24,12 @@ struct DestinationView: View {
 #Preview {
     VStack {
         DestinationView(
-            viewModel: DestinationViewModel(),
+            title: nil,
             placeholder: "Откуда"
         )
         
         DestinationView(
-            viewModel: DestinationViewModel(
-                station: Station(
-                    title: "Шереметьево"
-                )
-            ),
+            title: "Шереметьево",
             placeholder: "Куда"
         )
     }
