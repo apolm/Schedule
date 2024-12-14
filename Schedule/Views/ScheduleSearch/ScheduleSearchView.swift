@@ -9,7 +9,8 @@ struct ScheduleSearchView: View {
         HStack(spacing: 16) {
             VStack(spacing: 0) {
                 DestinationView(
-                    title: viewModel.stationFrom?.title,
+                    settlementTitle: viewModel.settlementFrom?.title,
+                    stationTitle: viewModel.stationFrom?.title,
                     placeholder: "Откуда"
                 )
                 .onTapGesture {
@@ -18,7 +19,8 @@ struct ScheduleSearchView: View {
                 }
                 
                 DestinationView(
-                    title: viewModel.stationTo?.title,
+                    settlementTitle: viewModel.settlementTo?.title,
+                    stationTitle: viewModel.stationTo?.title,
                     placeholder: "Куда"
                 )
                 .onTapGesture {
@@ -50,6 +52,18 @@ struct ScheduleSearchView: View {
                     viewModel.stationTo = selectedStation.station
                 }
             }
+        }
+        .onAppear {
+            //TODO Temp Mock Data
+            let st1 = Station(title: "Station 1")
+            let setl1 = Settlement(title: "City 1", stations: [st1])
+            viewModel.stationFrom = st1
+            viewModel.settlementFrom = setl1
+            
+            let st2 = Station(title: "Station 2")
+            let setl2 = Settlement(title: "City 2", stations: [st2])
+            viewModel.stationTo = st2
+            viewModel.settlementTo = setl2
         }
     }
 }

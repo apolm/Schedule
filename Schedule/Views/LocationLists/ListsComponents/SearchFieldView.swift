@@ -12,7 +12,7 @@ struct SearchFieldView: View {
             TextField("", text: $searchText)
                 .focused($isFocused)
                 .autocorrectionDisabled()
-                .commonTextStyle()
+                .baseTextStyle()
                 .placeholder(when: searchText.isEmpty) {
                     Text("Введите запрос")
                         .foregroundStyle(.ypGrayUniversal)

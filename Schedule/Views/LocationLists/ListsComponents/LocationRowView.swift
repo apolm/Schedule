@@ -8,10 +8,11 @@ struct LocationRowView<T: TitledItem>: View {
         Button(action: action) {
             HStack {
                 Text(item.title)
-                    .commonTextStyle()
+                    .baseTextStyle()
                 Spacer()
                 Image(Assets.chevron)
                     .renderingMode(.template)
+                    .foregroundStyle(.ypBlack)
             }
             .padding(.vertical, 19)
             .contentShape(Rectangle())

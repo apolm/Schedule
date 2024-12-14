@@ -5,8 +5,19 @@ struct TestView: View {
     @State private var toText = ""
     
     var body: some View {
-        Text("Test")
-            
+        Button(action: {
+            // Perform your search action here
+        }) {
+            Text("Найти")
+                .font(.body)
+                .bold()
+                .foregroundStyle(.ypWhiteUniversal)
+                .padding(.horizontal, 47.5)
+                .padding(.vertical, 20)
+                .background(Color.ypBlue)
+                .cornerRadius(16)
+        }
+        
     }
 }
 

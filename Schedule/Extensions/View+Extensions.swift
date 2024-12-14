@@ -11,11 +11,12 @@ extension View {
                         .foregroundStyle(.ypBlack)
                 }
                 ToolbarItem(placement: .navigationBarLeading) {
-                    Button(action: {
+                    Button {
                         presentationMode.wrappedValue.dismiss()
-                    }) {
+                    } label: {
                         Image(Assets.chevronLeft)
                             .renderingMode(.template)
+                            .foregroundStyle(.ypBlack)
                     }
                 }
             }

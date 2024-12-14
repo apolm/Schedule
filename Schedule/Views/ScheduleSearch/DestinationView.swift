@@ -1,15 +1,18 @@
 import SwiftUI
 
 struct DestinationView: View {
-    let title: String?
+    let settlementTitle: String?
+    let stationTitle: String?
     let placeholder: String
-
+    
     var body: some View {
         VStack {
-            if let title = title {
-                Text(title)
+            if let settlementTitle = settlementTitle,
+            let stationTitle = stationTitle {
+                Text("\(settlementTitle) (\(stationTitle))")
                     .foregroundStyle(.ypBlackUniversal)
                     .frame(maxWidth: .infinity, alignment: .leading)
+                    .lineLimit(1)
             } else {
                 Text(placeholder)
                     .foregroundStyle(.ypGrayUniversal)
@@ -24,12 +27,14 @@ struct DestinationView: View {
 #Preview {
     VStack {
         DestinationView(
-            title: nil,
+            settlementTitle: nil,
+            stationTitle: nil,
             placeholder: "Откуда"
         )
         
         DestinationView(
-            title: "Шереметьево",
+            settlementTitle: "Москва",
+            stationTitle: "Шереметьево",
             placeholder: "Куда"
         )
     }
