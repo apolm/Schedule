@@ -75,6 +75,7 @@ struct DataConverter {
                 carrier: carrier
             )
         }
+        .sorted { $0.departure < $1.departure }
     }
 }
 

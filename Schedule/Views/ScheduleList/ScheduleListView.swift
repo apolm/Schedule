@@ -18,9 +18,15 @@ struct ScheduleListView: View {
                             .titleTextStyle()
                             .frame(maxWidth: .infinity, alignment: .leading)
                         
-                        Spacer()
-                        Text("Schedule List")
-                        Spacer()
+                        List {
+                            ForEach(viewModel.routes) { route in
+                                RouteView(route: route)
+                                    .listRowSeparator(.hidden)
+                                    .listRowInsets(EdgeInsets())
+                            }
+                        }
+                        .listStyle(.plain)
+                        .listRowSpacing(8)
                     }
                     .padding(16)
                 }

@@ -56,18 +56,18 @@ extension MockDataProvider {
     // Mock Routes
     static var mockRoute1: Route {
         Route(
-            id: "FV-6907_250414_c8565_12",
-            date: Date(timeIntervalSince1970: 1744502400), // 2025-04-14T00:00:00
-            departure: Date(timeIntervalSince1970: 1744503000), // 2025-04-14T00:10:00
-            arrival: Date(timeIntervalSince1970: 1744507800), // 2025-04-14T01:50:00
-            durationSeconds: 6000,
+            id: "SU-42_241220_c26_12",
+            date: Date(timeIntervalSince1970: 1734720000), // 2024-12-20T00:00:00
+            departure: Date(timeIntervalSince1970: 1734741600), // 2024-12-20T06:00:00
+            arrival: Date(timeIntervalSince1970: 1734747000), // 2024-12-20T07:30:00
+            durationSeconds: 5400,
             hasTransfers: false,
             transferPoint: nil,
             carrier: Carrier(
-                code: "8565",
-                title: "Россия",
-                logo: "https://yastat.net/s3/rasp/media/data/company/svg/R-30x30__opt.svg",
-                email: nil,
+                code: "26",
+                title: "Аэрофлот",
+                logo: "https://yastat.net/s3/rasp/media/data/company/svg/Aeroflot_1.svg",
+                email: "callcenter@aeroflot.ru",
                 phone: nil
             )
         )
@@ -94,18 +94,18 @@ extension MockDataProvider {
     
     static var mockRoute3: Route {
         Route(
-            id: "SU-42_241220_c26_12",
-            date: Date(timeIntervalSince1970: 1734720000), // 2024-12-20T00:00:00
-            departure: Date(timeIntervalSince1970: 1734741600), // 2024-12-20T06:00:00
-            arrival: Date(timeIntervalSince1970: 1734747000), // 2024-12-20T07:30:00
-            durationSeconds: 5400,
+            id: "FV-6907_250414_c8565_12",
+            date: Date(timeIntervalSince1970: 1744502400), // 2025-04-14T00:00:00
+            departure: Date(timeIntervalSince1970: 1744503000), // 2025-04-14T00:10:00
+            arrival: Date(timeIntervalSince1970: 1744507800), // 2025-04-14T01:50:00
+            durationSeconds: 6000,
             hasTransfers: false,
             transferPoint: nil,
             carrier: Carrier(
-                code: "26",
-                title: "Аэрофлот",
-                logo: "https://yastat.net/s3/rasp/media/data/company/svg/Aeroflot_1.svg",
-                email: "callcenter@aeroflot.ru",
+                code: "8565",
+                title: "Россия",
+                logo: "https://yastat.net/s3/rasp/media/data/company/svg/R-30x30__opt.svg",
+                email: nil,
                 phone: nil
             )
         )

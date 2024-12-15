@@ -48,6 +48,8 @@
 		8FE0C74C2D0DE79D007DE19C /* ScheduleListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8FE0C74B2D0DE79D007DE19C /* ScheduleListViewModel.swift */; };
 		8FE0C7532D0EA5E7007DE19C /* Carrier.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8FE0C7522D0EA5E7007DE19C /* Carrier.swift */; };
 		8FE0C7562D0EA81D007DE19C /* Route.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8FE0C7552D0EA81D007DE19C /* Route.swift */; };
+		8FE0C7592D0F15CE007DE19C /* RouteView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8FE0C7582D0F15CE007DE19C /* RouteView.swift */; };
+		8FE0C75C2D0F33F6007DE19C /* DateFormatterProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8FE0C75B2D0F33F6007DE19C /* DateFormatterProvider.swift */; };
 		8FF065792CF3046D00347B67 /* NearestSettlementService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8FF065782CF3046D00347B67 /* NearestSettlementService.swift */; };
 		8FF0657C2CF325DD00347B67 /* ClientFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8FF0657B2CF325DD00347B67 /* ClientFactory.swift */; };
 		8FF0657F2CF3306C00347B67 /* CarrierService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8FF0657E2CF3306C00347B67 /* CarrierService.swift */; };
@@ -109,6 +111,8 @@
 		8FE0C74B2D0DE79D007DE19C /* ScheduleListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScheduleListViewModel.swift; sourceTree = "<group>"; };
 		8FE0C7522D0EA5E7007DE19C /* Carrier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Carrier.swift; sourceTree = "<group>"; };
 		8FE0C7552D0EA81D007DE19C /* Route.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Route.swift; sourceTree = "<group>"; };
+		8FE0C7582D0F15CE007DE19C /* RouteView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RouteView.swift; sourceTree = "<group>"; };
+		8FE0C75B2D0F33F6007DE19C /* DateFormatterProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateFormatterProvider.swift; sourceTree = "<group>"; };
 		8FF065782CF3046D00347B67 /* NearestSettlementService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NearestSettlementService.swift; sourceTree = "<group>"; };
 		8FF0657B2CF325DD00347B67 /* ClientFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClientFactory.swift; sourceTree = "<group>"; };
 		8FF0657E2CF3306C00347B67 /* CarrierService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CarrierService.swift; sourceTree = "<group>"; };
@@ -296,6 +300,7 @@
 				8F4E030C2D0578B3000615C1 /* Assets.swift */,
 				8F69FA982CF0551D0078C2A5 /* Constants.swift */,
 				8F7735792D0C0A6700583B36 /* CustomViewModifiers.swift */,
+				8FE0C75B2D0F33F6007DE19C /* DateFormatterProvider.swift */,
 			);
 			path = Common;
 			sourceTree = "<group>";
@@ -337,6 +342,7 @@
 			children = (
 				8FE0C7492D0DE767007DE19C /* ScheduleListView.swift */,
 				8FE0C74B2D0DE79D007DE19C /* ScheduleListViewModel.swift */,
+				8FE0C7582D0F15CE007DE19C /* RouteView.swift */,
 			);
 			path = ScheduleList;
 			sourceTree = "<group>";
@@ -416,11 +422,12 @@
 			};
 			buildConfigurationList = 8F08A44F2CE323F2000D2061 /* Build configuration list for PBXProject "Schedule" */;
 			compatibilityVersion = "Xcode 14.0";
-			developmentRegion = en;
+			developmentRegion = ru;
 			hasScannedForEncodings = 0;
 			knownRegions = (
 				en,
 				Base,
+				ru,
 			);
 			mainGroup = 8F08A44B2CE323F2000D2061;
 			packageReferences = (
@@ -475,6 +482,7 @@
 				8FE0C74A2D0DE767007DE19C /* ScheduleListView.swift in Sources */,
 				8FF065822CF385C500347B67 /* ScheduleBetweenStationsService.swift in Sources */,
 				8F4E030D2D0578B3000615C1 /* Assets.swift in Sources */,
+				8FE0C75C2D0F33F6007DE19C /* DateFormatterProvider.swift in Sources */,
 				8F2CAA452D07736000E9EBFA /* StationListView.swift in Sources */,
 				8F4E03382D06202D000615C1 /* DataProviderProtocol.swift in Sources */,
 				8F08A4582CE323F2000D2061 /* ScheduleApp.swift in Sources */,
@@ -486,6 +494,7 @@
 				8F4E033A2D062061000615C1 /* MockDataProvider.swift in Sources */,
 				8F69FA992CF0551D0078C2A5 /* Constants.swift in Sources */,
 				8F4E031A2D059C5A000615C1 /* Settlement.swift in Sources */,
+				8FE0C7592D0F15CE007DE19C /* RouteView.swift in Sources */,
 				8FF065862CF39E0C00347B67 /* ScheduleForStationService.swift in Sources */,
 				8F4E03002D04C232000615C1 /* UITabBar+Extensions.swift in Sources */,
 				8F4E03172D059B2C000615C1 /* Station.swift in Sources */,
