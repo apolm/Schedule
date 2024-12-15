@@ -19,7 +19,8 @@ struct MainTabView: View {
                                settlementFrom: settlementFrom,
                                stationFrom: stationFrom,
                                settlementTo: settlementTo,
-                               stationTo: stationTo
+                               stationTo: stationTo,
+                               dataProvider: MockDataProvider()
                            )
                     } label: {
                         Text("Найти")

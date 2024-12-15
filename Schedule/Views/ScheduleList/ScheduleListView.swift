@@ -6,29 +6,31 @@ struct ScheduleListView: View {
     @State private var path = NavigationPath()
     
     var body: some View {
-            NavigationStack(path: $path) {
-                VStack(spacing: 16) {
-                    Text(viewModel.title)
-                        .titleTextStyle()
-                        .frame(maxWidth: .infinity, alignment: .leading)
-                    
-                    Spacer()
-                    Text("Schedule List")
-                    Spacer()
-                }
-                .padding(16)
-                .navigationBarBackButtonHidden(true)
-                .toolbar {
-                    ToolbarItem(placement: .navigationBarLeading) {
-                        Button {
-                            presentationMode.wrappedValue.dismiss()
-                        } label: {
-                            Image(systemName: "chevron.left")
-                                .renderingMode(.template)
-                                .foregroundStyle(.black)
-                        }
+        NavigationStack(path: $path) {
+            VStack {
+                if viewModel.isLoading {
+                    ProgressView()
+                } else if viewModel.loadingFailed {
+                    Text("error").foregroundStyle(.red) // TODO - Show error View
+                } else {
+                    VStack(spacing: 16) {
+                        Text(viewModel.title)
+                            .titleTextStyle()
+                            .frame(maxWidth: .infinity, alignment: .leading)
+                        
+                        Spacer()
+                        Text("Schedule List")
+                        Spacer()
                     }
+                    .padding(16)
                 }
             }
+            .onAppear {
+                Task {
+                    await viewModel.fetchRoutes()
+                }
+            }
+            .navigationToolbar(title: nil, presentationMode: presentationMode)
         }
+    }
 }

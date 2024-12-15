@@ -22,5 +22,5 @@ struct LocationRowView<T: TitledItem>: View {
 }
 
 #Preview {
-    LocationRowView(item: Station(title: "Внуково")) { }
+    LocationRowView(item: MockDataProvider.mockStation1) { }
 }

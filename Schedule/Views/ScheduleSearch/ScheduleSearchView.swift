@@ -55,15 +55,11 @@ struct ScheduleSearchView: View {
         }
         .onAppear {
             //TODO Temp Mock Data
-            let st1 = Station(title: "Station 1")
-            let setl1 = Settlement(title: "City 1", stations: [st1])
-            viewModel.stationFrom = st1
-            viewModel.settlementFrom = setl1
+            viewModel.stationFrom = MockDataProvider.mockStation1
+            viewModel.settlementFrom = MockDataProvider.mockSettlement1
             
-            let st2 = Station(title: "Station 2")
-            let setl2 = Settlement(title: "City 2", stations: [st2])
-            viewModel.stationTo = st2
-            viewModel.settlementTo = setl2
+            viewModel.stationTo = MockDataProvider.mockStation3
+            viewModel.settlementTo = MockDataProvider.mockSettlement2
         }
     }
 }
