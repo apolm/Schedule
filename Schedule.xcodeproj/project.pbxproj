@@ -43,6 +43,7 @@
 		8F7735772D0BFE5E00583B36 /* LocationRowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F7735762D0BFE5E00583B36 /* LocationRowView.swift */; };
 		8F77357A2D0C0A6700583B36 /* CustomViewModifiers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F7735792D0C0A6700583B36 /* CustomViewModifiers.swift */; };
 		8F7B1B602D02BD3600F0D5DB /* MainTabView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F7B1B5F2D02BD3600F0D5DB /* MainTabView.swift */; };
+		8FB872DC2D0F476A00B92CF1 /* SDWebImageSwiftUI in Frameworks */ = {isa = PBXBuildFile; productRef = 8FB872DB2D0F476A00B92CF1 /* SDWebImageSwiftUI */; };
 		8FBB29D92D0957A600A9ABDD /* SearchFieldView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8FBB29D82D0957A600A9ABDD /* SearchFieldView.swift */; };
 		8FE0C74A2D0DE767007DE19C /* ScheduleListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8FE0C7492D0DE767007DE19C /* ScheduleListView.swift */; };
 		8FE0C74C2D0DE79D007DE19C /* ScheduleListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8FE0C74B2D0DE79D007DE19C /* ScheduleListViewModel.swift */; };
@@ -50,6 +51,8 @@
 		8FE0C7562D0EA81D007DE19C /* Route.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8FE0C7552D0EA81D007DE19C /* Route.swift */; };
 		8FE0C7592D0F15CE007DE19C /* RouteView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8FE0C7582D0F15CE007DE19C /* RouteView.swift */; };
 		8FE0C75C2D0F33F6007DE19C /* DateFormatterProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8FE0C75B2D0F33F6007DE19C /* DateFormatterProvider.swift */; };
+		8FE0C7632D0F4563007DE19C /* SDWebImageSVGKitPlugin in Frameworks */ = {isa = PBXBuildFile; productRef = 8FE0C7622D0F4563007DE19C /* SDWebImageSVGKitPlugin */; };
+		8FE0C7652D0F45FF007DE19C /* SVGImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8FE0C7642D0F45FF007DE19C /* SVGImageView.swift */; };
 		8FF065792CF3046D00347B67 /* NearestSettlementService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8FF065782CF3046D00347B67 /* NearestSettlementService.swift */; };
 		8FF0657C2CF325DD00347B67 /* ClientFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8FF0657B2CF325DD00347B67 /* ClientFactory.swift */; };
 		8FF0657F2CF3306C00347B67 /* CarrierService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8FF0657E2CF3306C00347B67 /* CarrierService.swift */; };
@@ -113,6 +116,7 @@
 		8FE0C7552D0EA81D007DE19C /* Route.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Route.swift; sourceTree = "<group>"; };
 		8FE0C7582D0F15CE007DE19C /* RouteView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RouteView.swift; sourceTree = "<group>"; };
 		8FE0C75B2D0F33F6007DE19C /* DateFormatterProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateFormatterProvider.swift; sourceTree = "<group>"; };
+		8FE0C7642D0F45FF007DE19C /* SVGImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SVGImageView.swift; sourceTree = "<group>"; };
 		8FF065782CF3046D00347B67 /* NearestSettlementService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NearestSettlementService.swift; sourceTree = "<group>"; };
 		8FF0657B2CF325DD00347B67 /* ClientFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClientFactory.swift; sourceTree = "<group>"; };
 		8FF0657E2CF3306C00347B67 /* CarrierService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CarrierService.swift; sourceTree = "<group>"; };
@@ -127,7 +131,9 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8FB872DC2D0F476A00B92CF1 /* SDWebImageSwiftUI in Frameworks */,
 				8F69FA892CF041290078C2A5 /* OpenAPIURLSession in Frameworks */,
+				8FE0C7632D0F4563007DE19C /* SDWebImageSVGKitPlugin in Frameworks */,
 				8F69FA862CF040EC0078C2A5 /* OpenAPIRuntime in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -301,6 +307,7 @@
 				8F69FA982CF0551D0078C2A5 /* Constants.swift */,
 				8F7735792D0C0A6700583B36 /* CustomViewModifiers.swift */,
 				8FE0C75B2D0F33F6007DE19C /* DateFormatterProvider.swift */,
+				8FE0C7642D0F45FF007DE19C /* SVGImageView.swift */,
 			);
 			path = Common;
 			sourceTree = "<group>";
@@ -378,6 +385,8 @@
 			packageProductDependencies = (
 				8F69FA852CF040EC0078C2A5 /* OpenAPIRuntime */,
 				8F69FA882CF041290078C2A5 /* OpenAPIURLSession */,
+				8FE0C7622D0F4563007DE19C /* SDWebImageSVGKitPlugin */,
+				8FB872DB2D0F476A00B92CF1 /* SDWebImageSwiftUI */,
 			);
 			productName = Schedule;
 			productReference = 8F08A4542CE323F2000D2061 /* Schedule.app */;
@@ -434,6 +443,9 @@
 				8F69FA7F2CF03FE30078C2A5 /* XCRemoteSwiftPackageReference "swift-openapi-generator" */,
 				8F69FA842CF040EC0078C2A5 /* XCRemoteSwiftPackageReference "swift-openapi-runtime" */,
 				8F69FA872CF041290078C2A5 /* XCRemoteSwiftPackageReference "swift-openapi-urlsession" */,
+				8FE0C75F2D0F452A007DE19C /* XCRemoteSwiftPackageReference "SDWebImage" */,
+				8FE0C7612D0F4563007DE19C /* XCRemoteSwiftPackageReference "SDWebImageSVGKitPlugin" */,
+				8FB872DA2D0F476A00B92CF1 /* XCRemoteSwiftPackageReference "SDWebImageSwiftUI" */,
 			);
 			productRefGroup = 8F08A4552CE323F2000D2061 /* Products */;
 			projectDirPath = "";
@@ -478,6 +490,7 @@
 				8FF065792CF3046D00347B67 /* NearestSettlementService.swift in Sources */,
 				8F69FA952CF051020078C2A5 /* NearestStationsService.swift in Sources */,
 				8FF0657C2CF325DD00347B67 /* ClientFactory.swift in Sources */,
+				8FE0C7652D0F45FF007DE19C /* SVGImageView.swift in Sources */,
 				8FE0C74C2D0DE79D007DE19C /* ScheduleListViewModel.swift in Sources */,
 				8FE0C74A2D0DE767007DE19C /* ScheduleListView.swift in Sources */,
 				8FF065822CF385C500347B67 /* ScheduleBetweenStationsService.swift in Sources */,
@@ -820,6 +833,30 @@
 				minimumVersion = 1.0.2;
 			};
 		};
+		8FB872DA2D0F476A00B92CF1 /* XCRemoteSwiftPackageReference "SDWebImageSwiftUI" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/SDWebImage/SDWebImageSwiftUI";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 3.1.3;
+			};
+		};
+		8FE0C75F2D0F452A007DE19C /* XCRemoteSwiftPackageReference "SDWebImage" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/SDWebImage/SDWebImage";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 5.20.0;
+			};
+		};
+		8FE0C7612D0F4563007DE19C /* XCRemoteSwiftPackageReference "SDWebImageSVGKitPlugin" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/SDWebImage/SDWebImageSVGKitPlugin";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 1.4.0;
+			};
+		};
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
@@ -837,6 +874,16 @@
 			isa = XCSwiftPackageProductDependency;
 			package = 8F69FA7F2CF03FE30078C2A5 /* XCRemoteSwiftPackageReference "swift-openapi-generator" */;
 			productName = "plugin:OpenAPIGenerator";
+		};
+		8FB872DB2D0F476A00B92CF1 /* SDWebImageSwiftUI */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 8FB872DA2D0F476A00B92CF1 /* XCRemoteSwiftPackageReference "SDWebImageSwiftUI" */;
+			productName = SDWebImageSwiftUI;
+		};
+		8FE0C7622D0F4563007DE19C /* SDWebImageSVGKitPlugin */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 8FE0C7612D0F4563007DE19C /* XCRemoteSwiftPackageReference "SDWebImageSVGKitPlugin" */;
+			productName = SDWebImageSVGKitPlugin;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};

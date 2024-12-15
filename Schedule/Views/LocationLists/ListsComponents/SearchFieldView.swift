@@ -13,7 +13,7 @@ struct SearchFieldView: View {
                 .focused($isFocused)
                 .autocorrectionDisabled()
                 .baseTextStyle()
-                .placeholder(when: searchText.isEmpty) {
+                .searchPlaceholder(when: searchText.isEmpty) {
                     Text("Введите запрос")
                         .foregroundStyle(.ypGrayUniversal)
                 }
@@ -34,7 +34,7 @@ struct SearchFieldView: View {
 }
 
 extension View {
-    func placeholder<Content: View>(
+    func searchPlaceholder<Content: View>(
         when shouldShow: Bool,
         alignment: Alignment = .leading,
         @ViewBuilder placeholder: () -> Content
