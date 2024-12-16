@@ -45,6 +45,10 @@
 		8F7B1B602D02BD3600F0D5DB /* MainTabView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F7B1B5F2D02BD3600F0D5DB /* MainTabView.swift */; };
 		8FB872DC2D0F476A00B92CF1 /* SDWebImageSwiftUI in Frameworks */ = {isa = PBXBuildFile; productRef = 8FB872DB2D0F476A00B92CF1 /* SDWebImageSwiftUI */; };
 		8FBB29D92D0957A600A9ABDD /* SearchFieldView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8FBB29D82D0957A600A9ABDD /* SearchFieldView.swift */; };
+		8FCE782B2D0F6440005D964C /* FiltersView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8FCE782A2D0F6440005D964C /* FiltersView.swift */; };
+		8FCE78302D0FE223005D964C /* Helpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8FCE782F2D0FE223005D964C /* Helpers.swift */; };
+		8FCE78322D0FE3AE005D964C /* DayPartCheckRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8FCE78312D0FE3AE005D964C /* DayPartCheckRow.swift */; };
+		8FCE78352D0FED4B005D964C /* RadioRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8FCE78342D0FED4B005D964C /* RadioRow.swift */; };
 		8FE0C74A2D0DE767007DE19C /* ScheduleListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8FE0C7492D0DE767007DE19C /* ScheduleListView.swift */; };
 		8FE0C74C2D0DE79D007DE19C /* ScheduleListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8FE0C74B2D0DE79D007DE19C /* ScheduleListViewModel.swift */; };
 		8FE0C7532D0EA5E7007DE19C /* Carrier.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8FE0C7522D0EA5E7007DE19C /* Carrier.swift */; };
@@ -110,6 +114,10 @@
 		8F7735792D0C0A6700583B36 /* CustomViewModifiers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomViewModifiers.swift; sourceTree = "<group>"; };
 		8F7B1B5F2D02BD3600F0D5DB /* MainTabView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTabView.swift; sourceTree = "<group>"; };
 		8FBB29D82D0957A600A9ABDD /* SearchFieldView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchFieldView.swift; sourceTree = "<group>"; };
+		8FCE782A2D0F6440005D964C /* FiltersView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FiltersView.swift; sourceTree = "<group>"; };
+		8FCE782F2D0FE223005D964C /* Helpers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Helpers.swift; sourceTree = "<group>"; };
+		8FCE78312D0FE3AE005D964C /* DayPartCheckRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DayPartCheckRow.swift; sourceTree = "<group>"; };
+		8FCE78342D0FED4B005D964C /* RadioRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RadioRow.swift; sourceTree = "<group>"; };
 		8FE0C7492D0DE767007DE19C /* ScheduleListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScheduleListView.swift; sourceTree = "<group>"; };
 		8FE0C74B2D0DE79D007DE19C /* ScheduleListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScheduleListViewModel.swift; sourceTree = "<group>"; };
 		8FE0C7522D0EA5E7007DE19C /* Carrier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Carrier.swift; sourceTree = "<group>"; };
@@ -344,12 +352,24 @@
 			path = ListsComponents;
 			sourceTree = "<group>";
 		};
+		8FCE782D2D0FE206005D964C /* Filters */ = {
+			isa = PBXGroup;
+			children = (
+				8FCE78312D0FE3AE005D964C /* DayPartCheckRow.swift */,
+				8FCE782A2D0F6440005D964C /* FiltersView.swift */,
+				8FCE782F2D0FE223005D964C /* Helpers.swift */,
+				8FCE78342D0FED4B005D964C /* RadioRow.swift */,
+			);
+			path = Filters;
+			sourceTree = "<group>";
+		};
 		8FE0C7482D0DE72D007DE19C /* ScheduleList */ = {
 			isa = PBXGroup;
 			children = (
 				8FE0C7492D0DE767007DE19C /* ScheduleListView.swift */,
 				8FE0C74B2D0DE79D007DE19C /* ScheduleListViewModel.swift */,
 				8FE0C7582D0F15CE007DE19C /* RouteView.swift */,
+				8FCE782D2D0FE206005D964C /* Filters */,
 			);
 			path = ScheduleList;
 			sourceTree = "<group>";
@@ -487,6 +507,7 @@
 				8FF0657F2CF3306C00347B67 /* CarrierService.swift in Sources */,
 				8FF0658D2CF43C0300347B67 /* StationsListService.swift in Sources */,
 				8F7B1B602D02BD3600F0D5DB /* MainTabView.swift in Sources */,
+				8FCE782B2D0F6440005D964C /* FiltersView.swift in Sources */,
 				8FF065792CF3046D00347B67 /* NearestSettlementService.swift in Sources */,
 				8F69FA952CF051020078C2A5 /* NearestStationsService.swift in Sources */,
 				8FF0657C2CF325DD00347B67 /* ClientFactory.swift in Sources */,
@@ -498,6 +519,7 @@
 				8FE0C75C2D0F33F6007DE19C /* DateFormatterProvider.swift in Sources */,
 				8F2CAA452D07736000E9EBFA /* StationListView.swift in Sources */,
 				8F4E03382D06202D000615C1 /* DataProviderProtocol.swift in Sources */,
+				8FCE78352D0FED4B005D964C /* RadioRow.swift in Sources */,
 				8F08A4582CE323F2000D2061 /* ScheduleApp.swift in Sources */,
 				8F2CAA472D07738D00E9EBFA /* StationListViewModel.swift in Sources */,
 				8F4E03432D062234000615C1 /* View+Extensions.swift in Sources */,
@@ -516,6 +538,7 @@
 				8FE0C7562D0EA81D007DE19C /* Route.swift in Sources */,
 				8F7735772D0BFE5E00583B36 /* LocationRowView.swift in Sources */,
 				8F4E03342D061DC4000615C1 /* DataProvider.swift in Sources */,
+				8FCE78322D0FE3AE005D964C /* DayPartCheckRow.swift in Sources */,
 				8F39C98C2CFCAD540065A830 /* AuthenticationMiddleware.swift in Sources */,
 				8F4E03132D05829A000615C1 /* TestView.swift in Sources */,
 				8FF065892CF3AC9A00347B67 /* ScheduleThreadService.swift in Sources */,
@@ -523,6 +546,7 @@
 				8F77357A2D0C0A6700583B36 /* CustomViewModifiers.swift in Sources */,
 				8F4E03302D060F4A000615C1 /* DataConverter.swift in Sources */,
 				8F4E03482D0626C2000615C1 /* ScheduleSearchViewModel.swift in Sources */,
+				8FCE78302D0FE223005D964C /* Helpers.swift in Sources */,
 				8F4E03202D05CB88000615C1 /* SettlementListView.swift in Sources */,
 				8F4E034C2D0630C2000615C1 /* DestinationView.swift in Sources */,
 				8F44C22B2CF599DB00663D7A /* CopyrightService.swift in Sources */,

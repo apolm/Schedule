@@ -18,15 +18,41 @@ struct ScheduleListView: View {
                             .titleTextStyle()
                             .frame(maxWidth: .infinity, alignment: .leading)
                         
-                        List {
-                            ForEach(viewModel.routes) { route in
-                                RouteView(route: route)
-                                    .listRowSeparator(.hidden)
-                                    .listRowInsets(EdgeInsets())
+                        ZStack {
+                            List {
+                                ForEach(viewModel.routes) { route in
+                                    RouteView(route: route)
+                                        .listRowSeparator(.hidden)
+                                        .listRowInsets(EdgeInsets())
+                                }
+                            }
+                            .listStyle(.plain)
+                            .listRowSpacing(8)
+                            
+                            VStack {
+                                Spacer()
+                                
+                                Button {
+                                    path.append("Filters")
+                                } label: {
+                                    HStack(spacing: 4) {
+                                        Text("Уточнить время")
+                                            .bold()
+                                            .foregroundStyle(.ypWhiteUniversal)
+                                        
+                                        if viewModel.filterIsOn {
+                                            Circle()
+                                                .fill(Color.ypRed)
+                                                .frame(width: 8, height: 8)
+                                        }
+                                    }
+                                    .padding(.vertical, 20)
+                                    .frame(maxWidth: .infinity)
+                                    .background(.ypBlue)
+                                    .cornerRadius(16)
+                                }
                             }
                         }
-                        .listStyle(.plain)
-                        .listRowSpacing(8)
                     }
                     .padding(16)
                 }
@@ -37,6 +63,11 @@ struct ScheduleListView: View {
                 }
             }
             .navigationToolbar(title: nil, presentationMode: presentationMode)
+            .navigationDestination(for: String.self) { value in
+                if value == "Filters" {
+                    FiltersView(initialFilters: Filters(dayParts: Set())) { _ in }
+                }
+            }
         }
     }
 }

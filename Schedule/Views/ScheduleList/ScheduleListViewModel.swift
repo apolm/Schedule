@@ -4,6 +4,7 @@ final class ScheduleListViewModel: ObservableObject, Identifiable {
     @Published private(set) var routes: [Route] = []
     @Published private(set) var isLoading = false
     @Published private(set) var loadingFailed = false
+    @Published private(set) var filterIsOn = false
     
     let id = UUID()
     let settlementFrom: Settlement

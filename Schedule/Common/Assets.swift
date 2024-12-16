@@ -2,8 +2,12 @@ import Foundation
 
 enum Assets {
     static let changeDirection = "СhangeDirection"
+    static let checkBoxOff = "CheckBoxOff"
+    static let checkBoxOn = "CheckBoxOn"
     static let chevron = "Chevron"
     static let chevronLeft = "ChevronLeft"
+    static let radioButtonOff = "RadioButtonOff"
+    static let radioButtonOn = "RadioButtonOn"
     static let tabSchedule = "TabSchedule"
     static let tabSettings = "TabSettings"
 }
