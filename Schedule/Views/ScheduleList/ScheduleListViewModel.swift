@@ -1,10 +1,10 @@
 import SwiftUI
 
 final class ScheduleListViewModel: ObservableObject, Identifiable {
-    @Published private(set) var routes: [Route] = []
+    @Published private(set) var allRoutes: [Route] = []
     @Published private(set) var isLoading = false
     @Published private(set) var loadingFailed = false
-    @Published private(set) var filterIsOn = false
+    @Published private(set) var filters = Filters()
     
     let id = UUID()
     let settlementFrom: Settlement
@@ -15,7 +15,14 @@ final class ScheduleListViewModel: ObservableObject, Identifiable {
     var title: String {
         "\(settlementFrom.title) (\(stationFrom.title)) → \(settlementTo.title) (\(stationTo.title))"
     }
-    
+    var filteredRoutes: [Route] {
+        if filters.isEmpty {
+            return allRoutes
+        } else {
+            return allRoutes.filter { $0.matchesFilters(filters) }
+        }
+    }
+        
     private let dataProvider: DataProviderProtocol
     
     init(
@@ -32,12 +39,16 @@ final class ScheduleListViewModel: ObservableObject, Identifiable {
         self.dataProvider = dataProvider
     }
     
+    func applyFilters(value newValue: Filters) {
+        filters = newValue
+    }
+    
     @MainActor
     func fetchRoutes() async {
         isLoading = true
         loadingFailed = false
         do {
-            routes = try await dataProvider.fetchRoutes(from: stationFrom, to: stationTo)
+            allRoutes = try await dataProvider.fetchRoutes(from: stationFrom, to: stationTo)
         } catch {
             print(error.localizedDescription)
             loadingFailed = true

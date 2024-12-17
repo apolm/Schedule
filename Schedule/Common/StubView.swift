@@ -1,6 +1,6 @@
 import SwiftUI
 
-struct EmptySearchResultsView: View {
+struct StubView: View {
     let message: String
     
     var body: some View {
@@ -15,5 +15,5 @@ struct EmptySearchResultsView: View {
 }
 
 #Preview {
-    EmptySearchResultsView(message: "No results found")
+    StubView(message: "No results found")
 }

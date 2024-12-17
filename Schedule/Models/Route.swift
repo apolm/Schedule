@@ -25,4 +25,21 @@ struct Route: Identifiable {
             return .night
         }
     }
+    
+    func matchesFilters(_ filters: Filters) -> Bool {
+        guard !filters.isEmpty else {
+            return true
+        }
+        
+        if !filters.dayParts.isEmpty && !filters.dayParts.contains(self.dayPart) {
+            return false
+        }
+        
+        if let showTransfers = filters.showTransfers,
+           showTransfers != self.hasTransfers {
+            return false
+        }
+        
+        return true
+    }
 }

@@ -10,8 +10,8 @@ struct StationListView: View {
         VStack {
             SearchFieldView(searchText: $viewModel.searchText)
             
-            if viewModel.filteredStations.isEmpty {
-                EmptySearchResultsView(message: "Станция не найдена")
+            if viewModel.isSearching && viewModel.filteredStations.isEmpty {
+                StubView(message: "Станция не найдена")
             } else {
                 List {
                     ForEach(viewModel.filteredStations) { station in

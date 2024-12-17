@@ -6,8 +6,3 @@ enum DayPart: CaseIterable {
     case evening    // 18:00–00:00
     case night      // 00:00–06:00
 }
-
-struct Filters {
-    var dayParts: Set<DayPart>
-    var showTransfers: Bool?
-}

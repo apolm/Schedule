@@ -45,9 +45,10 @@ struct FiltersView: View {
             
             Spacer()
             
-            if isAnyFilterSelected {
+            if isAnyFilterSelected || !initialFilters.isEmpty {
                 Button {
                     onApply(selectedFilters)
+                    presentationMode.wrappedValue.dismiss()
                 } label: {
                     Text("Применить")
                         .bold()
@@ -65,5 +66,5 @@ struct FiltersView: View {
 }
 
 #Preview {
-    FiltersView(initialFilters: Filters(dayParts: Set<DayPart>())) { _ in }
+    FiltersView(initialFilters: Filters()) { _ in }
 }

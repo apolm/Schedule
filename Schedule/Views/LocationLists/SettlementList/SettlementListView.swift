@@ -18,8 +18,8 @@ struct SettlementListView: View {
                     VStack {
                         SearchFieldView(searchText: $viewModel.searchText)
                         
-                        if viewModel.filteredSettlements.isEmpty {
-                            EmptySearchResultsView(message: "Город не найден")
+                        if viewModel.isSearching && viewModel.filteredSettlements.isEmpty {
+                            StubView(message: "Город не найден")
                         } else {
                             List {
                                 ForEach(viewModel.filteredSettlements) { settlement in

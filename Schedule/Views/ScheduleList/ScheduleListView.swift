@@ -19,15 +19,19 @@ struct ScheduleListView: View {
                             .frame(maxWidth: .infinity, alignment: .leading)
                         
                         ZStack {
-                            List {
-                                ForEach(viewModel.routes) { route in
-                                    RouteView(route: route)
-                                        .listRowSeparator(.hidden)
-                                        .listRowInsets(EdgeInsets())
+                            if !viewModel.filters.isEmpty && viewModel.filteredRoutes.isEmpty {
+                                StubView(message: "Вариантов нет")
+                            } else {
+                                List {
+                                    ForEach(viewModel.filteredRoutes) { route in
+                                        RouteView(route: route)
+                                            .listRowSeparator(.hidden)
+                                            .listRowInsets(EdgeInsets())
+                                    }
                                 }
+                                .listStyle(.plain)
+                                .listRowSpacing(8)
                             }
-                            .listStyle(.plain)
-                            .listRowSpacing(8)
                             
                             VStack {
                                 Spacer()
@@ -40,7 +44,7 @@ struct ScheduleListView: View {
                                             .bold()
                                             .foregroundStyle(.ypWhiteUniversal)
                                         
-                                        if viewModel.filterIsOn {
+                                        if !viewModel.filters.isEmpty {
                                             Circle()
                                                 .fill(Color.ypRed)
                                                 .frame(width: 8, height: 8)
@@ -65,7 +69,9 @@ struct ScheduleListView: View {
             .navigationToolbar(title: nil, presentationMode: presentationMode)
             .navigationDestination(for: String.self) { value in
                 if value == "Filters" {
-                    FiltersView(initialFilters: Filters(dayParts: Set())) { _ in }
+                    FiltersView(initialFilters: viewModel.filters) { newFilters in
+                        viewModel.applyFilters(value: newFilters)
+                    }
                 }
             }
         }
