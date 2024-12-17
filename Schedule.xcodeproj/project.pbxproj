@@ -46,6 +46,7 @@
 		8FB872DC2D0F476A00B92CF1 /* SDWebImageSwiftUI in Frameworks */ = {isa = PBXBuildFile; productRef = 8FB872DB2D0F476A00B92CF1 /* SDWebImageSwiftUI */; };
 		8FBB29D92D0957A600A9ABDD /* SearchFieldView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8FBB29D82D0957A600A9ABDD /* SearchFieldView.swift */; };
 		8FCAB8EB2D113D3F008C2BC5 /* Filters.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8FCAB8EA2D113D3F008C2BC5 /* Filters.swift */; };
+		8FCAB8EE2D1147B3008C2BC5 /* CarrierView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8FCAB8ED2D1147B3008C2BC5 /* CarrierView.swift */; };
 		8FCE782B2D0F6440005D964C /* FiltersView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8FCE782A2D0F6440005D964C /* FiltersView.swift */; };
 		8FCE78302D0FE223005D964C /* DayPart.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8FCE782F2D0FE223005D964C /* DayPart.swift */; };
 		8FCE78322D0FE3AE005D964C /* DayPartCheckRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8FCE78312D0FE3AE005D964C /* DayPartCheckRow.swift */; };
@@ -116,6 +117,7 @@
 		8F7B1B5F2D02BD3600F0D5DB /* MainTabView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTabView.swift; sourceTree = "<group>"; };
 		8FBB29D82D0957A600A9ABDD /* SearchFieldView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchFieldView.swift; sourceTree = "<group>"; };
 		8FCAB8EA2D113D3F008C2BC5 /* Filters.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Filters.swift; sourceTree = "<group>"; };
+		8FCAB8ED2D1147B3008C2BC5 /* CarrierView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CarrierView.swift; sourceTree = "<group>"; };
 		8FCE782A2D0F6440005D964C /* FiltersView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FiltersView.swift; sourceTree = "<group>"; };
 		8FCE782F2D0FE223005D964C /* DayPart.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DayPart.swift; sourceTree = "<group>"; };
 		8FCE78312D0FE3AE005D964C /* DayPartCheckRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DayPartCheckRow.swift; sourceTree = "<group>"; };
@@ -326,6 +328,7 @@
 		8F7B1B5E2D02BBE900F0D5DB /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				8FCAB8EC2D11479F008C2BC5 /* Carrier */,
 				8FBB29D52D0956F700A9ABDD /* LocationLists */,
 				8F4E033C2D0621C4000615C1 /* MainTab */,
 				8FE0C7482D0DE72D007DE19C /* ScheduleList */,
@@ -352,6 +355,14 @@
 				8FBB29D82D0957A600A9ABDD /* SearchFieldView.swift */,
 			);
 			path = ListsComponents;
+			sourceTree = "<group>";
+		};
+		8FCAB8EC2D11479F008C2BC5 /* Carrier */ = {
+			isa = PBXGroup;
+			children = (
+				8FCAB8ED2D1147B3008C2BC5 /* CarrierView.swift */,
+			);
+			path = Carrier;
 			sourceTree = "<group>";
 		};
 		8FCE782D2D0FE206005D964C /* Filters */ = {
@@ -547,6 +558,7 @@
 				8FF065892CF3AC9A00347B67 /* ScheduleThreadService.swift in Sources */,
 				8FE0C7532D0EA5E7007DE19C /* Carrier.swift in Sources */,
 				8F77357A2D0C0A6700583B36 /* CustomViewModifiers.swift in Sources */,
+				8FCAB8EE2D1147B3008C2BC5 /* CarrierView.swift in Sources */,
 				8F4E03302D060F4A000615C1 /* DataConverter.swift in Sources */,
 				8FCAB8EB2D113D3F008C2BC5 /* Filters.swift in Sources */,
 				8F4E03482D0626C2000615C1 /* ScheduleSearchViewModel.swift in Sources */,

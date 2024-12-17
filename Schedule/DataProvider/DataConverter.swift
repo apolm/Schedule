@@ -59,7 +59,8 @@ struct DataConverter {
             let carrier = Carrier(
                 code: String(carrierData.code ?? 0),
                 title: carrierData.title ?? "",
-                logo: carrierData.logo_svg ?? "",
+                logoSVG: carrierData.logo_svg ?? "",
+                logoFull: carrierData.logo ?? "",
                 email: carrierData.email?.isEmpty == false ? carrierData.email : nil,
                 phone: carrierData.phone?.isEmpty == false ? carrierData.phone : nil
             )

@@ -24,9 +24,16 @@ struct ScheduleListView: View {
                             } else {
                                 List {
                                     ForEach(viewModel.filteredRoutes) { route in
-                                        RouteView(route: route)
-                                            .listRowSeparator(.hidden)
-                                            .listRowInsets(EdgeInsets())
+                                        Button {
+                                            path.append(route.carrier)
+                                        } label: {
+                                            RouteView(route: route)
+                                                .listRowSeparator(.hidden)
+                                                .listRowInsets(EdgeInsets())
+                                        }
+                                        .buttonStyle(.plain)
+                                        .listRowSeparator(.hidden)
+                                        .listRowInsets(EdgeInsets())
                                     }
                                 }
                                 .listStyle(.plain)
@@ -73,6 +80,9 @@ struct ScheduleListView: View {
                         viewModel.applyFilters(value: newFilters)
                     }
                 }
+            }
+            .navigationDestination(for: Carrier.self) { carrier in
+                CarrierView(carrier: carrier)
             }
         }
     }

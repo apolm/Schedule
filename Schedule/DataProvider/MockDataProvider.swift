@@ -66,7 +66,8 @@ extension MockDataProvider {
             carrier: Carrier(
                 code: "26",
                 title: "Аэрофлот",
-                logo: "https://yastat.net/s3/rasp/media/data/company/svg/Aeroflot_1.svg",
+                logoSVG: "https://yastat.net/s3/rasp/media/data/company/svg/Aeroflot_1.svg",
+                logoFull: "https://yastat.net/s3/rasp/media/data/company/logo/aeroflot_logo_ru.gif",
                 email: "callcenter@aeroflot.ru",
                 phone: nil
             )
@@ -85,7 +86,8 @@ extension MockDataProvider {
             carrier: Carrier(
                 code: "8565",
                 title: "Россия",
-                logo: "https://yastat.net/s3/rasp/media/data/company/svg/R-30x30__opt.svg",
+                logoSVG: "https://yastat.net/s3/rasp/media/data/company/svg/R-30x30__opt.svg",
+                logoFull: "https://yastat.net/s3/rasp/media/data/company/logo/logorus_1.jpg",
                 email: nil,
                 phone: nil
             )
@@ -104,10 +106,23 @@ extension MockDataProvider {
             carrier: Carrier(
                 code: "8565",
                 title: "Россия",
-                logo: "https://yastat.net/s3/rasp/media/data/company/svg/R-30x30__opt.svg",
+                logoSVG: "https://yastat.net/s3/rasp/media/data/company/svg/R-30x30__opt.svg",
+                logoFull: "https://yastat.net/s3/rasp/media/data/company/logo/logorus_1.jpg",
                 email: nil,
                 phone: nil
             )
+        )
+    }
+    
+    // Mock Carrier
+    static var carrier: Carrier {
+        Carrier(
+            code: "26",
+            title: "Аэрофлот",
+            logoSVG: "https://yastat.net/s3/rasp/media/data/company/svg/Aeroflot_1.svg",
+            logoFull: "https://yastat.net/s3/rasp/media/data/company/logo/aeroflot_logo_ru.gif",
+            email: "callcenter@aeroflot.ru",
+            phone: nil
         )
     }
 }

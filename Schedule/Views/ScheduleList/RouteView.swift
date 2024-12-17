@@ -23,7 +23,7 @@ struct TopRow: View {
     
     var body: some View {
         HStack(spacing: 8) {
-            SVGImageView(svgURL: URL(string: route.carrier.logo))
+            SVGImageView(svgURL: URL(string: route.carrier.logoSVG))
                 .frame(width: 38, height: 38)
                 .clipShape(RoundedRectangle(cornerRadius: 12))
             
