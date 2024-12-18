@@ -44,7 +44,7 @@ struct MainTabView: View {
                 
             }
             
-            Color.orange
+            SettingsTabView()
                 .tabItem {
                     Image(Assets.tabSettings)
                         .renderingMode(.template)

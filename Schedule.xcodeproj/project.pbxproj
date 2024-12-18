@@ -66,6 +66,9 @@
 		8FF065862CF39E0C00347B67 /* ScheduleForStationService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8FF065852CF39E0C00347B67 /* ScheduleForStationService.swift */; };
 		8FF065892CF3AC9A00347B67 /* ScheduleThreadService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8FF065882CF3AC9A00347B67 /* ScheduleThreadService.swift */; };
 		8FF0658D2CF43C0300347B67 /* StationsListService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8FF0658C2CF43C0300347B67 /* StationsListService.swift */; };
+		8FFFEDAA2D11FCC200D6655A /* SettingsTabView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8FFFEDA92D11FCC200D6655A /* SettingsTabView.swift */; };
+		8FFFEDAD2D11FF3300D6655A /* UserAgreementView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8FFFEDAC2D11FF3300D6655A /* UserAgreementView.swift */; };
+		8FFFEDB02D12A32400D6655A /* WebView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8FFFEDAF2D12A32400D6655A /* WebView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -136,6 +139,9 @@
 		8FF065852CF39E0C00347B67 /* ScheduleForStationService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScheduleForStationService.swift; sourceTree = "<group>"; };
 		8FF065882CF3AC9A00347B67 /* ScheduleThreadService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScheduleThreadService.swift; sourceTree = "<group>"; };
 		8FF0658C2CF43C0300347B67 /* StationsListService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StationsListService.swift; sourceTree = "<group>"; };
+		8FFFEDA92D11FCC200D6655A /* SettingsTabView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsTabView.swift; sourceTree = "<group>"; };
+		8FFFEDAC2D11FF3300D6655A /* UserAgreementView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserAgreementView.swift; sourceTree = "<group>"; };
+		8FFFEDAF2D12A32400D6655A /* WebView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -260,12 +266,13 @@
 			path = DataProvider;
 			sourceTree = "<group>";
 		};
-		8F4E033C2D0621C4000615C1 /* MainTab */ = {
+		8F4E033C2D0621C4000615C1 /* Tabs */ = {
 			isa = PBXGroup;
 			children = (
 				8F7B1B5F2D02BD3600F0D5DB /* MainTabView.swift */,
+				8FFFEDAB2D11FF1800D6655A /* Settings */,
 			);
-			path = MainTab;
+			path = Tabs;
 			sourceTree = "<group>";
 		};
 		8F4E03402D0621DD000615C1 /* ScheduleSearch */ = {
@@ -330,9 +337,9 @@
 			children = (
 				8FCAB8EC2D11479F008C2BC5 /* Carrier */,
 				8FBB29D52D0956F700A9ABDD /* LocationLists */,
-				8F4E033C2D0621C4000615C1 /* MainTab */,
 				8FE0C7482D0DE72D007DE19C /* ScheduleList */,
 				8F4E03402D0621DD000615C1 /* ScheduleSearch */,
+				8F4E033C2D0621C4000615C1 /* Tabs */,
 				8F4E03122D05829A000615C1 /* TestView.swift */,
 			);
 			path = Views;
@@ -397,6 +404,16 @@
 				8F39C9A22CFCBD4E0065A830 /* ServiceManager.swift */,
 			);
 			path = Helpers;
+			sourceTree = "<group>";
+		};
+		8FFFEDAB2D11FF1800D6655A /* Settings */ = {
+			isa = PBXGroup;
+			children = (
+				8FFFEDA92D11FCC200D6655A /* SettingsTabView.swift */,
+				8FFFEDAC2D11FF3300D6655A /* UserAgreementView.swift */,
+				8FFFEDAF2D12A32400D6655A /* WebView.swift */,
+			);
+			path = Settings;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -533,7 +550,9 @@
 				8FE0C75C2D0F33F6007DE19C /* DateFormatterProvider.swift in Sources */,
 				8F2CAA452D07736000E9EBFA /* StationListView.swift in Sources */,
 				8F4E03382D06202D000615C1 /* DataProviderProtocol.swift in Sources */,
+				8FFFEDAD2D11FF3300D6655A /* UserAgreementView.swift in Sources */,
 				8FCE78352D0FED4B005D964C /* RadioRow.swift in Sources */,
+				8FFFEDAA2D11FCC200D6655A /* SettingsTabView.swift in Sources */,
 				8F08A4582CE323F2000D2061 /* ScheduleApp.swift in Sources */,
 				8F2CAA472D07738D00E9EBFA /* StationListViewModel.swift in Sources */,
 				8F4E03432D062234000615C1 /* View+Extensions.swift in Sources */,
@@ -548,6 +567,7 @@
 				8F4E03002D04C232000615C1 /* UITabBar+Extensions.swift in Sources */,
 				8F4E03172D059B2C000615C1 /* Station.swift in Sources */,
 				8F39C9902CFCB6520065A830 /* NetworkManager.swift in Sources */,
+				8FFFEDB02D12A32400D6655A /* WebView.swift in Sources */,
 				8F4E03102D0580DA000615C1 /* ScheduleSearchView.swift in Sources */,
 				8FE0C7562D0EA81D007DE19C /* Route.swift in Sources */,
 				8F7735772D0BFE5E00583B36 /* LocationRowView.swift in Sources */,
