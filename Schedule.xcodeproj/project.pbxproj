@@ -45,6 +45,7 @@
 		8F7B1B602D02BD3600F0D5DB /* MainTabView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F7B1B5F2D02BD3600F0D5DB /* MainTabView.swift */; };
 		8FA04FB52D13D9B0008F15BD /* ScheduleTabView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8FA04FB42D13D9B0008F15BD /* ScheduleTabView.swift */; };
 		8FA04FB72D13E073008F15BD /* AppSettings.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8FA04FB62D13E073008F15BD /* AppSettings.swift */; };
+		8FA04FBA2D13E503008F15BD /* ErrorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8FA04FB92D13E503008F15BD /* ErrorView.swift */; };
 		8FB872DC2D0F476A00B92CF1 /* SDWebImageSwiftUI in Frameworks */ = {isa = PBXBuildFile; productRef = 8FB872DB2D0F476A00B92CF1 /* SDWebImageSwiftUI */; };
 		8FBB29D92D0957A600A9ABDD /* SearchFieldView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8FBB29D82D0957A600A9ABDD /* SearchFieldView.swift */; };
 		8FCAB8EB2D113D3F008C2BC5 /* Filters.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8FCAB8EA2D113D3F008C2BC5 /* Filters.swift */; };
@@ -122,6 +123,7 @@
 		8F7B1B5F2D02BD3600F0D5DB /* MainTabView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTabView.swift; sourceTree = "<group>"; };
 		8FA04FB42D13D9B0008F15BD /* ScheduleTabView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScheduleTabView.swift; sourceTree = "<group>"; };
 		8FA04FB62D13E073008F15BD /* AppSettings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppSettings.swift; sourceTree = "<group>"; };
+		8FA04FB92D13E503008F15BD /* ErrorView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ErrorView.swift; sourceTree = "<group>"; };
 		8FBB29D82D0957A600A9ABDD /* SearchFieldView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchFieldView.swift; sourceTree = "<group>"; };
 		8FCAB8EA2D113D3F008C2BC5 /* Filters.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Filters.swift; sourceTree = "<group>"; };
 		8FCAB8ED2D1147B3008C2BC5 /* CarrierView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CarrierView.swift; sourceTree = "<group>"; };
@@ -194,6 +196,7 @@
 				8F08A4572CE323F2000D2061 /* ScheduleApp.swift */,
 				8F69FA972CF054E40078C2A5 /* Common */,
 				8F4E03362D061FFB000615C1 /* DataProvider */,
+				8FA04FBC2D13E50C008F15BD /* Error */,
 				8F4E03022D04CB29000615C1 /* Extensions */,
 				8F4E03152D059AF1000615C1 /* Models */,
 				8F08A45D2CE323F4000D2061 /* Preview Content */,
@@ -357,6 +360,14 @@
 				8F4E03402D0621DD000615C1 /* SearchPane */,
 			);
 			path = Schedule;
+			sourceTree = "<group>";
+		};
+		8FA04FBC2D13E50C008F15BD /* Error */ = {
+			isa = PBXGroup;
+			children = (
+				8FA04FB92D13E503008F15BD /* ErrorView.swift */,
+			);
+			path = Error;
 			sourceTree = "<group>";
 		};
 		8FBB29D52D0956F700A9ABDD /* LocationLists */ = {
@@ -587,6 +598,7 @@
 				8F4E03102D0580DA000615C1 /* ScheduleSearchView.swift in Sources */,
 				8FE0C7562D0EA81D007DE19C /* Route.swift in Sources */,
 				8F7735772D0BFE5E00583B36 /* LocationRowView.swift in Sources */,
+				8FA04FBA2D13E503008F15BD /* ErrorView.swift in Sources */,
 				8F4E03342D061DC4000615C1 /* DataProvider.swift in Sources */,
 				8FCE78322D0FE3AE005D964C /* DayPartCheckRow.swift in Sources */,
 				8F39C98C2CFCAD540065A830 /* AuthenticationMiddleware.swift in Sources */,

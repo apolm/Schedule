@@ -11,7 +11,7 @@ struct ScheduleListView: View {
                 if viewModel.isLoading {
                     ProgressView()
                 } else if viewModel.loadingFailed {
-                    Text("error").foregroundStyle(.red) // TODO - Show error View
+                    ErrorView(errorType: .serverError)
                 } else {
                     VStack(spacing: 16) {
                         Text(viewModel.title)
