@@ -28,6 +28,7 @@ struct SettlementListView: View {
                                     }
                                     .listRowSeparator(.hidden)
                                     .listRowInsets(EdgeInsets())
+                                    .background(.ypWhite)
                                 }
                             }
                             .listStyle(.plain)
@@ -47,6 +48,7 @@ struct SettlementListView: View {
                     await viewModel.fetchSettlements()
                 }
             }
+            .background(.ypWhite)
             .navigationToolbar(title: "Выбор города", presentationMode: presentationMode)
         }
     }

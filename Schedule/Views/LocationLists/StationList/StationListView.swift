@@ -21,12 +21,14 @@ struct StationListView: View {
                         }
                         .listRowSeparator(.hidden)
                         .listRowInsets(EdgeInsets())
+                        .background(.ypWhite)
                     }
                 }
                 .listStyle(.plain)
             }
         }
         .padding(.horizontal, 16)
+        .background(.ypWhite)
         .navigationToolbar(title: "Выбор станции", presentationMode: presentationMode)
     }
 }

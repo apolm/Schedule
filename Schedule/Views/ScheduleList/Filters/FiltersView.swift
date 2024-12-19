@@ -61,6 +61,7 @@ struct FiltersView: View {
             }
         }
         .padding(16)
+        .background(.ypWhite)
         .navigationToolbar(title: nil, presentationMode: presentationMode)
     }
 }

@@ -15,7 +15,7 @@ struct SettingsTabView: View {
                         .labelsHidden()
                         .tint(.ypBlue)
                 }
-                                
+                
                 Button(action: {
                     showUserAgreement = true
                 }) {
@@ -40,9 +40,9 @@ struct SettingsTabView: View {
             }
             .padding(.horizontal, 16)
             .padding(.vertical, 24)
+            .background(.ypWhite)
             .fullScreenCover(isPresented: $showUserAgreement) {
                 UserAgreementView()
-                    //.ignoresSafeArea()
             }
         }
     }

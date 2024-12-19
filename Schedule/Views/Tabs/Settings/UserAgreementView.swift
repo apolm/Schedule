@@ -20,6 +20,7 @@ struct UserAgreementView: View {
                 }
             }
             .ignoresSafeArea(edges: .bottom)
+            .background(.ypWhite)
             .navigationToolbar(title: "Пользовательское соглашение", presentationMode: presentationMode)
         }
     }

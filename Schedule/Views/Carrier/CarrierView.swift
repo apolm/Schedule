@@ -42,6 +42,7 @@ struct CarrierView: View {
             Spacer()
         }
         .padding(16)
+        .background(.ypWhite)
         .navigationToolbar(title: "Информация о перевозчике", presentationMode: presentationMode)
     }
 }

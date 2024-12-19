@@ -68,6 +68,7 @@ struct ScheduleListView: View {
                     .padding(16)
                 }
             }
+            .background(.ypWhite)
             .onAppear {
                 Task {
                     await viewModel.fetchRoutes()
