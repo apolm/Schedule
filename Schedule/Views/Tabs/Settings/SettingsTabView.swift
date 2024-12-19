@@ -1,7 +1,7 @@
 import SwiftUI
 
 struct SettingsTabView: View {
-    @State private var isDarkMode = false
+    @EnvironmentObject var appSettings: AppSettings
     @State private var showUserAgreement = false
     
     var body: some View {
@@ -11,7 +11,7 @@ struct SettingsTabView: View {
                     Text("Темная тема")
                         .foregroundColor(.ypBlack)
                     Spacer()
-                    Toggle("", isOn: $isDarkMode)
+                    Toggle("", isOn: $appSettings.isDarkMode)
                         .labelsHidden()
                         .tint(.ypBlue)
                 }
@@ -50,4 +50,5 @@ struct SettingsTabView: View {
 
 #Preview {
     SettingsTabView()
+        .environmentObject(AppSettings())
 }
