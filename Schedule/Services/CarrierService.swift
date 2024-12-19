@@ -1,10 +1,10 @@
 import OpenAPIRuntime
 import OpenAPIURLSession
 
-typealias Carrier = Components.Schemas.Carrier
+typealias ThreadCarrier = Components.Schemas.Carrier
 
 protocol CarrierServiceProtocol {
-    func getCarrier(code: String) async throws -> Carrier
+    func getCarrier(code: String) async throws -> ThreadCarrier
 }
 
 final class CarrierService: CarrierServiceProtocol {
@@ -18,7 +18,7 @@ final class CarrierService: CarrierServiceProtocol {
         self.client = client
     }
     
-    func getCarrier(code: String) async throws -> Carrier {
+    func getCarrier(code: String) async throws -> ThreadCarrier {
         let response = try await client.getCarrier(query: .init(
             code: code
         ))

@@ -94,7 +94,7 @@ final class ServiceManager {
     }
     
     // MARK: - Carrier
-    func getCarrier(code: String) async throws -> Carrier {
+    func getCarrier(code: String) async throws -> ThreadCarrier {
         guard let client = client else { throw NetworkError.clientUnavailable }
         
         if carrierService == nil {
