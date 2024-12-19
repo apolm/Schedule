@@ -43,6 +43,7 @@
 		8F7735772D0BFE5E00583B36 /* LocationRowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F7735762D0BFE5E00583B36 /* LocationRowView.swift */; };
 		8F77357A2D0C0A6700583B36 /* CustomViewModifiers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F7735792D0C0A6700583B36 /* CustomViewModifiers.swift */; };
 		8F7B1B602D02BD3600F0D5DB /* MainTabView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F7B1B5F2D02BD3600F0D5DB /* MainTabView.swift */; };
+		8FA04FB52D13D9B0008F15BD /* ScheduleTabView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8FA04FB42D13D9B0008F15BD /* ScheduleTabView.swift */; };
 		8FB872DC2D0F476A00B92CF1 /* SDWebImageSwiftUI in Frameworks */ = {isa = PBXBuildFile; productRef = 8FB872DB2D0F476A00B92CF1 /* SDWebImageSwiftUI */; };
 		8FBB29D92D0957A600A9ABDD /* SearchFieldView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8FBB29D82D0957A600A9ABDD /* SearchFieldView.swift */; };
 		8FCAB8EB2D113D3F008C2BC5 /* Filters.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8FCAB8EA2D113D3F008C2BC5 /* Filters.swift */; };
@@ -118,6 +119,7 @@
 		8F7735762D0BFE5E00583B36 /* LocationRowView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationRowView.swift; sourceTree = "<group>"; };
 		8F7735792D0C0A6700583B36 /* CustomViewModifiers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomViewModifiers.swift; sourceTree = "<group>"; };
 		8F7B1B5F2D02BD3600F0D5DB /* MainTabView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTabView.swift; sourceTree = "<group>"; };
+		8FA04FB42D13D9B0008F15BD /* ScheduleTabView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScheduleTabView.swift; sourceTree = "<group>"; };
 		8FBB29D82D0957A600A9ABDD /* SearchFieldView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchFieldView.swift; sourceTree = "<group>"; };
 		8FCAB8EA2D113D3F008C2BC5 /* Filters.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Filters.swift; sourceTree = "<group>"; };
 		8FCAB8ED2D1147B3008C2BC5 /* CarrierView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CarrierView.swift; sourceTree = "<group>"; };
@@ -270,19 +272,20 @@
 			isa = PBXGroup;
 			children = (
 				8F7B1B5F2D02BD3600F0D5DB /* MainTabView.swift */,
+				8FA04FB22D13D98D008F15BD /* Schedule */,
 				8FFFEDAB2D11FF1800D6655A /* Settings */,
 			);
 			path = Tabs;
 			sourceTree = "<group>";
 		};
-		8F4E03402D0621DD000615C1 /* ScheduleSearch */ = {
+		8F4E03402D0621DD000615C1 /* SearchPane */ = {
 			isa = PBXGroup;
 			children = (
 				8F4E030F2D0580DA000615C1 /* ScheduleSearchView.swift */,
 				8F4E03472D0626C2000615C1 /* ScheduleSearchViewModel.swift */,
 				8F4E034B2D0630C2000615C1 /* DestinationView.swift */,
 			);
-			path = ScheduleSearch;
+			path = SearchPane;
 			sourceTree = "<group>";
 		};
 		8F69FA8C2CF043530078C2A5 /* Resources */ = {
@@ -338,11 +341,19 @@
 				8FCAB8EC2D11479F008C2BC5 /* Carrier */,
 				8FBB29D52D0956F700A9ABDD /* LocationLists */,
 				8FE0C7482D0DE72D007DE19C /* ScheduleList */,
-				8F4E03402D0621DD000615C1 /* ScheduleSearch */,
 				8F4E033C2D0621C4000615C1 /* Tabs */,
 				8F4E03122D05829A000615C1 /* TestView.swift */,
 			);
 			path = Views;
+			sourceTree = "<group>";
+		};
+		8FA04FB22D13D98D008F15BD /* Schedule */ = {
+			isa = PBXGroup;
+			children = (
+				8FA04FB42D13D9B0008F15BD /* ScheduleTabView.swift */,
+				8F4E03402D0621DD000615C1 /* SearchPane */,
+			);
+			path = Schedule;
 			sourceTree = "<group>";
 		};
 		8FBB29D52D0956F700A9ABDD /* LocationLists */ = {
@@ -545,6 +556,7 @@
 				8FE0C7652D0F45FF007DE19C /* SVGImageView.swift in Sources */,
 				8FE0C74C2D0DE79D007DE19C /* ScheduleListViewModel.swift in Sources */,
 				8FE0C74A2D0DE767007DE19C /* ScheduleListView.swift in Sources */,
+				8FA04FB52D13D9B0008F15BD /* ScheduleTabView.swift in Sources */,
 				8FF065822CF385C500347B67 /* ScheduleBetweenStationsService.swift in Sources */,
 				8F4E030D2D0578B3000615C1 /* Assets.swift in Sources */,
 				8FE0C75C2D0F33F6007DE19C /* DateFormatterProvider.swift in Sources */,
