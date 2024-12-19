@@ -53,14 +53,6 @@ struct ScheduleSearchView: View {
                 }
             }
         }
-        .onAppear {
-            //TODO Temp Mock Data
-            viewModel.stationFrom = MockDataProvider.mockStation1
-            viewModel.settlementFrom = MockDataProvider.mockSettlement1
-            
-            viewModel.stationTo = MockDataProvider.mockStation3
-            viewModel.settlementTo = MockDataProvider.mockSettlement2
-        }
     }
 }
 

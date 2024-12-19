@@ -60,9 +60,29 @@ struct BottomRow: View {
         let minutes = (route.durationSeconds % 3600) / 60
         
         if hours >= 1 {
-            return "\(hours) часов"
+            let hourWord = timeNoun(hours, one: "час", few: "часа", many: "часов")
+            return "\(hours) \(hourWord)"
         } else {
-            return "\(minutes) минут"
+            let minuteWord = timeNoun(minutes, one: "минута", few: "минуты", many: "минут")
+            return "\(minutes) \(minuteWord)"
+        }
+    }
+    
+    private func timeNoun(_ number: Int, one: String, few: String, many: String) -> String {
+        let lastTwoDigits = number % 100
+        let lastDigit = number % 10
+        
+        if (11...14).contains(lastTwoDigits) {
+            return many
+        }
+        
+        switch lastDigit {
+        case 1:
+            return one
+        case 2, 3, 4:
+            return few
+        default:
+            return many
         }
     }
     
