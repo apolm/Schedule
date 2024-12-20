@@ -18,14 +18,13 @@ struct SearchFieldView: View {
                         .foregroundStyle(.ypGrayUniversal)
                 }
             
-            if isFocused {
-                Button {
-                    searchText = ""
-                } label: {
-                    Image(systemName: "xmark.circle.fill")
-                        .foregroundStyle(.ypGrayUniversal)
-                }
+            Button {
+                searchText = ""
+            } label: {
+                Image(systemName: "xmark.circle.fill")
+                    .foregroundStyle(.ypGrayUniversal)
             }
+            .hidden(!isFocused)
         }
         .padding(8)
         .background(Color(.ypLightGray))

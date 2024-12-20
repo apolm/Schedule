@@ -1,6 +1,6 @@
 import SwiftUI
 
-struct BaseTextStyle: ViewModifier {
+private struct BaseTextStyle: ViewModifier {
     func body(content: Content) -> some View {
         content
             .font(.body)
@@ -10,11 +10,11 @@ struct BaseTextStyle: ViewModifier {
 
 extension View {
     func baseTextStyle() -> some View {
-        self.modifier(BaseTextStyle())
+        modifier(BaseTextStyle())
     }
 }
 
-struct TitleTextStyle: ViewModifier {
+private struct TitleTextStyle: ViewModifier {
     func body(content: Content) -> some View {
         content
             .font(.system(size: 24, weight: .bold))
@@ -24,6 +24,12 @@ struct TitleTextStyle: ViewModifier {
 
 extension View {
     func titleTextStyle() -> some View {
-        self.modifier(TitleTextStyle())
+        modifier(TitleTextStyle())
+    }
+}
+
+extension View {
+    func hidden(_ shouldHide: Bool) -> some View {
+        opacity(shouldHide ? 0 : 1)
     }
 }

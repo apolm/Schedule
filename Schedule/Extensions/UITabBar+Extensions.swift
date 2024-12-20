@@ -1,5 +1,4 @@
 import UIKit
-import SwiftUI
 
 extension UITabBar {
     static func setCustomAppearance(backgroundColor: UIColor, shadowColor: UIColor) {

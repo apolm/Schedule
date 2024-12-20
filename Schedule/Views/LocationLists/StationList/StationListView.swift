@@ -2,7 +2,7 @@ import SwiftUI
 
 struct StationListView: View {
     @Environment(\.presentationMode) var presentationMode
-    @StateObject var viewModel: StationListViewModel
+    @ObservedObject var viewModel: StationListViewModel
     
     var onStationSelected: (Station) -> Void
     

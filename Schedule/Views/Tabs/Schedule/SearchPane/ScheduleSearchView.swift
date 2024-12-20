@@ -43,7 +43,7 @@ struct ScheduleSearchView: View {
         .background(.ypBlue)
         .clipShape(RoundedRectangle(cornerRadius: 20))
         .fullScreenCover(isPresented: $isPresentingDestinationSelection) {
-            SettlementListView(viewModel: SettlementListViewModel(dataProvider: MockDataProvider())) { selectedStation in
+            SettlementListView() { selectedStation in
                 if selectingFrom {
                     viewModel.settlementFrom = selectedStation.settlement
                     viewModel.stationFrom = selectedStation.station

@@ -13,11 +13,7 @@ struct RadioRow<T: Equatable>: View {
             Spacer()
             
             Button {
-                if selection == tag {
-                    selection = nil
-                } else {
-                    selection = tag
-                }
+                selection = (selection == tag) ? nil : tag
             } label: {
                 Image(selection == tag ? Assets.radioButtonOn : Assets.radioButtonOff)
             }

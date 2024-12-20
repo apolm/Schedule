@@ -24,6 +24,7 @@ struct CarrierView: View {
                 VStack(alignment: .leading, spacing: 4) {
                     Text("E-mail")
                         .foregroundStyle(.ypBlack)
+                    
                     Text(carrier.email ?? "-")
                         .font(.caption)
                         .foregroundStyle(.ypBlue)
@@ -32,6 +33,7 @@ struct CarrierView: View {
                 VStack(alignment: .leading, spacing: 4) {
                     Text("Телефон")
                         .foregroundStyle(.ypBlack)
+                    
                     Text(carrier.phone ?? "-")
                         .font(.caption)
                         .foregroundStyle(.ypBlue)

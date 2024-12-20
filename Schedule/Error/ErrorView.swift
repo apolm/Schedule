@@ -3,39 +3,39 @@ import SwiftUI
 enum ErrorType {
     case serverError
     case connectionError
-}
 
-struct ErrorView: View {
-    var errorType: ErrorType
-    
-    private var imageName: String {
-        switch errorType {
+    var imageName: String {
+        switch self {
         case .serverError:
             return Assets.serverError
         case .connectionError:
             return Assets.connectionError
         }
     }
-    
-    private var errorMessage: String {
-        switch errorType {
+
+    var errorMessage: String {
+        switch self {
         case .serverError:
             return "Ошибка сервера"
         case .connectionError:
             return "Нет интернета"
         }
     }
+}
+
+struct ErrorView: View {
+    var errorType: ErrorType
     
     var body: some View {
         VStack(spacing: 16) {
             Spacer()
             
-            Image(imageName)
+            Image(errorType.imageName)
                 .resizable()
                 .scaledToFit()
                 .frame(width: 223, height: 223)
             
-            Text(errorMessage)
+            Text(errorType.errorMessage)
                 .titleTextStyle()
             
             Spacer()

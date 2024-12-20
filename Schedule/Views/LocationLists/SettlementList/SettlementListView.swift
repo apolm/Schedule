@@ -2,7 +2,7 @@ import SwiftUI
 
 struct SettlementListView: View {
     @Environment(\.presentationMode) var presentationMode
-    @StateObject var viewModel: SettlementListViewModel
+    @StateObject var viewModel = SettlementListViewModel(dataProvider: MockDataProvider())
     @State private var path = NavigationPath()
     
     var onStationSelected: (SelectedStation) -> Void
