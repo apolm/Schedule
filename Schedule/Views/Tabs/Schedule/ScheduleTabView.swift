@@ -6,6 +6,10 @@ struct ScheduleTabView: View {
     
     var body: some View {
         VStack(spacing: 16) {
+            StoriesGroupScrollView()
+                .padding(.vertical, 24)
+                .ignoresSafeArea(edges: .horizontal)
+            
             ScheduleSearchView(viewModel: searchViewModel)
                 .padding(.horizontal, 16)
             
@@ -34,10 +38,13 @@ struct ScheduleTabView: View {
             
             Spacer()
         }
-        .padding(.top, 16)
         .background(.ypWhite)
         .fullScreenCover(item: $scheduleListViewModel) { scheduleListViewModel in
             ScheduleListView(viewModel: scheduleListViewModel)
         }
     }
+}
+
+#Preview {
+    ScheduleTabView()
 }

@@ -38,6 +38,11 @@
 		8F69FA912CF044210078C2A5 /* openapi-generator-config.yaml in Resources */ = {isa = PBXBuildFile; fileRef = 8F69FA902CF044210078C2A5 /* openapi-generator-config.yaml */; };
 		8F69FA952CF051020078C2A5 /* NearestStationsService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F69FA942CF051020078C2A5 /* NearestStationsService.swift */; };
 		8F69FA992CF0551D0078C2A5 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F69FA982CF0551D0078C2A5 /* Constants.swift */; };
+		8F6B6BEB2D188F570056999D /* Story.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F6B6BEA2D188F570056999D /* Story.swift */; };
+		8F6B6BED2D188F7B0056999D /* StoriesGroup.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F6B6BEC2D188F7B0056999D /* StoriesGroup.swift */; };
+		8F6B6BF12D19213C0056999D /* StoriesGroupViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F6B6BF02D19213C0056999D /* StoriesGroupViewModel.swift */; };
+		8F6B6BF32D1922F10056999D /* StoriesGroupScrollView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F6B6BF22D1922F10056999D /* StoriesGroupScrollView.swift */; };
+		8F6B6BFA2D192CED0056999D /* StoriesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F6B6BF92D192CED0056999D /* StoriesView.swift */; };
 		8F77356D2D0BF18400583B36 /* StubView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F77356C2D0BF18400583B36 /* StubView.swift */; };
 		8F7735752D0BFD8E00583B36 /* TitledItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F7735742D0BFD8E00583B36 /* TitledItem.swift */; };
 		8F7735772D0BFE5E00583B36 /* LocationRowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F7735762D0BFE5E00583B36 /* LocationRowView.swift */; };
@@ -117,6 +122,11 @@
 		8F69FA902CF044210078C2A5 /* openapi-generator-config.yaml */ = {isa = PBXFileReference; lastKnownFileType = text.yaml; path = "openapi-generator-config.yaml"; sourceTree = "<group>"; };
 		8F69FA942CF051020078C2A5 /* NearestStationsService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NearestStationsService.swift; sourceTree = "<group>"; };
 		8F69FA982CF0551D0078C2A5 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		8F6B6BEA2D188F570056999D /* Story.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Story.swift; sourceTree = "<group>"; };
+		8F6B6BEC2D188F7B0056999D /* StoriesGroup.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoriesGroup.swift; sourceTree = "<group>"; };
+		8F6B6BF02D19213C0056999D /* StoriesGroupViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoriesGroupViewModel.swift; sourceTree = "<group>"; };
+		8F6B6BF22D1922F10056999D /* StoriesGroupScrollView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoriesGroupScrollView.swift; sourceTree = "<group>"; };
+		8F6B6BF92D192CED0056999D /* StoriesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoriesView.swift; sourceTree = "<group>"; };
 		8F77356C2D0BF18400583B36 /* StubView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StubView.swift; sourceTree = "<group>"; };
 		8F7735742D0BFD8E00583B36 /* TitledItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TitledItem.swift; sourceTree = "<group>"; };
 		8F7735762D0BFE5E00583B36 /* LocationRowView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationRowView.swift; sourceTree = "<group>"; };
@@ -250,6 +260,8 @@
 				8FE0C7552D0EA81D007DE19C /* Route.swift */,
 				8F4E03192D059C5A000615C1 /* Settlement.swift */,
 				8F4E03162D059B2C000615C1 /* Station.swift */,
+				8F6B6BEA2D188F570056999D /* Story.swift */,
+				8F6B6BEC2D188F7B0056999D /* StoriesGroup.swift */,
 				8F7735742D0BFD8E00583B36 /* TitledItem.swift */,
 			);
 			path = Models;
@@ -344,12 +356,31 @@
 			path = Common;
 			sourceTree = "<group>";
 		};
+		8F6B6BE92D188C440056999D /* Stories */ = {
+			isa = PBXGroup;
+			children = (
+				8F6B6BF92D192CED0056999D /* StoriesView.swift */,
+			);
+			path = Stories;
+			sourceTree = "<group>";
+		};
+		8F6B6BEF2D1920E40056999D /* StoriesGroup */ = {
+			isa = PBXGroup;
+			children = (
+				8F6B6BF22D1922F10056999D /* StoriesGroupScrollView.swift */,
+				8F6B6BF02D19213C0056999D /* StoriesGroupViewModel.swift */,
+			);
+			path = StoriesGroup;
+			sourceTree = "<group>";
+		};
 		8F7B1B5E2D02BBE900F0D5DB /* Views */ = {
 			isa = PBXGroup;
 			children = (
 				8FCAB8EC2D11479F008C2BC5 /* Carrier */,
 				8FBB29D52D0956F700A9ABDD /* LocationLists */,
 				8FE0C7482D0DE72D007DE19C /* ScheduleList */,
+				8F6B6BE92D188C440056999D /* Stories */,
+				8F6B6BEF2D1920E40056999D /* StoriesGroup */,
 				8F4E033C2D0621C4000615C1 /* Tabs */,
 				8F4E03122D05829A000615C1 /* TestView.swift */,
 			);
@@ -565,6 +596,7 @@
 			files = (
 				8F7735752D0BFD8E00583B36 /* TitledItem.swift in Sources */,
 				8FF0657F2CF3306C00347B67 /* CarrierService.swift in Sources */,
+				8F6B6BEB2D188F570056999D /* Story.swift in Sources */,
 				8FF0658D2CF43C0300347B67 /* StationsListService.swift in Sources */,
 				8F7B1B602D02BD3600F0D5DB /* MainTabView.swift in Sources */,
 				8FCE782B2D0F6440005D964C /* FiltersView.swift in Sources */,
@@ -585,6 +617,7 @@
 				8FCE78352D0FED4B005D964C /* RadioRow.swift in Sources */,
 				8FFFEDAA2D11FCC200D6655A /* SettingsTabView.swift in Sources */,
 				8F08A4582CE323F2000D2061 /* ScheduleApp.swift in Sources */,
+				8F6B6BED2D188F7B0056999D /* StoriesGroup.swift in Sources */,
 				8F2CAA472D07738D00E9EBFA /* StationListViewModel.swift in Sources */,
 				8F4E03432D062234000615C1 /* View+Extensions.swift in Sources */,
 				8F4E031E2D05CB7D000615C1 /* SettlementListViewModel.swift in Sources */,
@@ -598,6 +631,7 @@
 				8F4E03002D04C232000615C1 /* UITabBar+Extensions.swift in Sources */,
 				8F4E03172D059B2C000615C1 /* Station.swift in Sources */,
 				8F39C9902CFCB6520065A830 /* NetworkManager.swift in Sources */,
+				8F6B6BF12D19213C0056999D /* StoriesGroupViewModel.swift in Sources */,
 				8FFFEDB02D12A32400D6655A /* WebView.swift in Sources */,
 				8F4E03102D0580DA000615C1 /* ScheduleSearchView.swift in Sources */,
 				8FE0C7562D0EA81D007DE19C /* Route.swift in Sources */,
@@ -617,6 +651,8 @@
 				8FCE78302D0FE223005D964C /* DayPart.swift in Sources */,
 				8F4E03202D05CB88000615C1 /* SettlementListView.swift in Sources */,
 				8F4E034C2D0630C2000615C1 /* DestinationView.swift in Sources */,
+				8F6B6BF32D1922F10056999D /* StoriesGroupScrollView.swift in Sources */,
+				8F6B6BFA2D192CED0056999D /* StoriesView.swift in Sources */,
 				8F44C22B2CF599DB00663D7A /* CopyrightService.swift in Sources */,
 				8F39C9A32CFCBD4E0065A830 /* ServiceManager.swift in Sources */,
 			);
