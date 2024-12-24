@@ -17,10 +17,15 @@
 		8F39C9A12CFCBC140065A830 /* ServicesTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F39C9A02CFCBC140065A830 /* ServicesTests.swift */; };
 		8F39C9A32CFCBD4E0065A830 /* ServiceManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F39C9A22CFCBD4E0065A830 /* ServiceManager.swift */; };
 		8F44C22B2CF599DB00663D7A /* CopyrightService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F44C22A2CF599DB00663D7A /* CopyrightService.swift */; };
+		8F4505342D19E88100C59C80 /* TimerConfiguration+Calculations.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F4505322D19E88100C59C80 /* TimerConfiguration+Calculations.swift */; };
+		8F4505352D19E88100C59C80 /* TimerConfiguration.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F4505332D19E88100C59C80 /* TimerConfiguration.swift */; };
+		8F4505382D19E8C800C59C80 /* ProgressBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F4505372D19E8C800C59C80 /* ProgressBar.swift */; };
+		8F45053A2D19E8E400C59C80 /* StoriesTabView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F4505392D19E8E400C59C80 /* StoriesTabView.swift */; };
+		8F45053C2D19E8F100C59C80 /* StoryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F45053B2D19E8F100C59C80 /* StoryView.swift */; };
+		8F45053E2D19E8FC00C59C80 /* StoriesProgressBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F45053D2D19E8FC00C59C80 /* StoriesProgressBar.swift */; };
 		8F4E03002D04C232000615C1 /* UITabBar+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F4E02FF2D04C232000615C1 /* UITabBar+Extensions.swift */; };
 		8F4E030D2D0578B3000615C1 /* Assets.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F4E030C2D0578B3000615C1 /* Assets.swift */; };
 		8F4E03102D0580DA000615C1 /* ScheduleSearchView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F4E030F2D0580DA000615C1 /* ScheduleSearchView.swift */; };
-		8F4E03132D05829A000615C1 /* TestView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F4E03122D05829A000615C1 /* TestView.swift */; };
 		8F4E03172D059B2C000615C1 /* Station.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F4E03162D059B2C000615C1 /* Station.swift */; };
 		8F4E031A2D059C5A000615C1 /* Settlement.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F4E03192D059C5A000615C1 /* Settlement.swift */; };
 		8F4E031E2D05CB7D000615C1 /* SettlementListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F4E031D2D05CB7C000615C1 /* SettlementListViewModel.swift */; };
@@ -103,10 +108,15 @@
 		8F39C9A02CFCBC140065A830 /* ServicesTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServicesTests.swift; sourceTree = "<group>"; };
 		8F39C9A22CFCBD4E0065A830 /* ServiceManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServiceManager.swift; sourceTree = "<group>"; };
 		8F44C22A2CF599DB00663D7A /* CopyrightService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CopyrightService.swift; sourceTree = "<group>"; };
+		8F4505322D19E88100C59C80 /* TimerConfiguration+Calculations.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "TimerConfiguration+Calculations.swift"; sourceTree = "<group>"; };
+		8F4505332D19E88100C59C80 /* TimerConfiguration.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TimerConfiguration.swift; sourceTree = "<group>"; };
+		8F4505372D19E8C800C59C80 /* ProgressBar.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProgressBar.swift; sourceTree = "<group>"; };
+		8F4505392D19E8E400C59C80 /* StoriesTabView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StoriesTabView.swift; sourceTree = "<group>"; };
+		8F45053B2D19E8F100C59C80 /* StoryView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StoryView.swift; sourceTree = "<group>"; };
+		8F45053D2D19E8FC00C59C80 /* StoriesProgressBar.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StoriesProgressBar.swift; sourceTree = "<group>"; };
 		8F4E02FF2D04C232000615C1 /* UITabBar+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UITabBar+Extensions.swift"; sourceTree = "<group>"; };
 		8F4E030C2D0578B3000615C1 /* Assets.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Assets.swift; sourceTree = "<group>"; };
 		8F4E030F2D0580DA000615C1 /* ScheduleSearchView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScheduleSearchView.swift; sourceTree = "<group>"; };
-		8F4E03122D05829A000615C1 /* TestView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestView.swift; sourceTree = "<group>"; };
 		8F4E03162D059B2C000615C1 /* Station.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Station.swift; sourceTree = "<group>"; };
 		8F4E03192D059C5A000615C1 /* Settlement.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Settlement.swift; sourceTree = "<group>"; };
 		8F4E031D2D05CB7C000615C1 /* SettlementListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettlementListViewModel.swift; sourceTree = "<group>"; };
@@ -214,6 +224,7 @@
 				8F08A45D2CE323F4000D2061 /* Preview Content */,
 				8F69FA8C2CF043530078C2A5 /* Resources */,
 				8F69FA932CF050960078C2A5 /* Services */,
+				8F4505312D19E88100C59C80 /* StoryAlgorithms */,
 				8F7B1B5E2D02BBE900F0D5DB /* Views */,
 			);
 			path = Schedule;
@@ -242,6 +253,15 @@
 				8F39C9A02CFCBC140065A830 /* ServicesTests.swift */,
 			);
 			path = ScheduleTests;
+			sourceTree = "<group>";
+		};
+		8F4505312D19E88100C59C80 /* StoryAlgorithms */ = {
+			isa = PBXGroup;
+			children = (
+				8F4505322D19E88100C59C80 /* TimerConfiguration+Calculations.swift */,
+				8F4505332D19E88100C59C80 /* TimerConfiguration.swift */,
+			);
+			path = StoryAlgorithms;
 			sourceTree = "<group>";
 		};
 		8F4E03022D04CB29000615C1 /* Extensions */ = {
@@ -359,7 +379,11 @@
 		8F6B6BE92D188C440056999D /* Stories */ = {
 			isa = PBXGroup;
 			children = (
+				8F4505372D19E8C800C59C80 /* ProgressBar.swift */,
+				8F45053D2D19E8FC00C59C80 /* StoriesProgressBar.swift */,
+				8F4505392D19E8E400C59C80 /* StoriesTabView.swift */,
 				8F6B6BF92D192CED0056999D /* StoriesView.swift */,
+				8F45053B2D19E8F100C59C80 /* StoryView.swift */,
 			);
 			path = Stories;
 			sourceTree = "<group>";
@@ -382,7 +406,6 @@
 				8F6B6BE92D188C440056999D /* Stories */,
 				8F6B6BEF2D1920E40056999D /* StoriesGroup */,
 				8F4E033C2D0621C4000615C1 /* Tabs */,
-				8F4E03122D05829A000615C1 /* TestView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -594,12 +617,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8F45053C2D19E8F100C59C80 /* StoryView.swift in Sources */,
 				8F7735752D0BFD8E00583B36 /* TitledItem.swift in Sources */,
 				8FF0657F2CF3306C00347B67 /* CarrierService.swift in Sources */,
 				8F6B6BEB2D188F570056999D /* Story.swift in Sources */,
 				8FF0658D2CF43C0300347B67 /* StationsListService.swift in Sources */,
 				8F7B1B602D02BD3600F0D5DB /* MainTabView.swift in Sources */,
 				8FCE782B2D0F6440005D964C /* FiltersView.swift in Sources */,
+				8F4505342D19E88100C59C80 /* TimerConfiguration+Calculations.swift in Sources */,
 				8FF065792CF3046D00347B67 /* NearestSettlementService.swift in Sources */,
 				8F69FA952CF051020078C2A5 /* NearestStationsService.swift in Sources */,
 				8FF0657C2CF325DD00347B67 /* ClientFactory.swift in Sources */,
@@ -615,6 +640,7 @@
 				8FFFEDAD2D11FF3300D6655A /* UserAgreementView.swift in Sources */,
 				8FA04FB72D13E073008F15BD /* AppSettings.swift in Sources */,
 				8FCE78352D0FED4B005D964C /* RadioRow.swift in Sources */,
+				8F4505382D19E8C800C59C80 /* ProgressBar.swift in Sources */,
 				8FFFEDAA2D11FCC200D6655A /* SettingsTabView.swift in Sources */,
 				8F08A4582CE323F2000D2061 /* ScheduleApp.swift in Sources */,
 				8F6B6BED2D188F7B0056999D /* StoriesGroup.swift in Sources */,
@@ -622,6 +648,7 @@
 				8F4E03432D062234000615C1 /* View+Extensions.swift in Sources */,
 				8F4E031E2D05CB7D000615C1 /* SettlementListViewModel.swift in Sources */,
 				8F77356D2D0BF18400583B36 /* StubView.swift in Sources */,
+				8F4505352D19E88100C59C80 /* TimerConfiguration.swift in Sources */,
 				8FBB29D92D0957A600A9ABDD /* SearchFieldView.swift in Sources */,
 				8F4E033A2D062061000615C1 /* MockDataProvider.swift in Sources */,
 				8F69FA992CF0551D0078C2A5 /* Constants.swift in Sources */,
@@ -631,6 +658,7 @@
 				8F4E03002D04C232000615C1 /* UITabBar+Extensions.swift in Sources */,
 				8F4E03172D059B2C000615C1 /* Station.swift in Sources */,
 				8F39C9902CFCB6520065A830 /* NetworkManager.swift in Sources */,
+				8F45053A2D19E8E400C59C80 /* StoriesTabView.swift in Sources */,
 				8F6B6BF12D19213C0056999D /* StoriesGroupViewModel.swift in Sources */,
 				8FFFEDB02D12A32400D6655A /* WebView.swift in Sources */,
 				8F4E03102D0580DA000615C1 /* ScheduleSearchView.swift in Sources */,
@@ -640,7 +668,6 @@
 				8F4E03342D061DC4000615C1 /* DataProvider.swift in Sources */,
 				8FCE78322D0FE3AE005D964C /* DayPartCheckRow.swift in Sources */,
 				8F39C98C2CFCAD540065A830 /* AuthenticationMiddleware.swift in Sources */,
-				8F4E03132D05829A000615C1 /* TestView.swift in Sources */,
 				8FF065892CF3AC9A00347B67 /* ScheduleThreadService.swift in Sources */,
 				8FE0C7532D0EA5E7007DE19C /* Carrier.swift in Sources */,
 				8F77357A2D0C0A6700583B36 /* CustomViewModifiers.swift in Sources */,
@@ -653,6 +680,7 @@
 				8F4E034C2D0630C2000615C1 /* DestinationView.swift in Sources */,
 				8F6B6BF32D1922F10056999D /* StoriesGroupScrollView.swift in Sources */,
 				8F6B6BFA2D192CED0056999D /* StoriesView.swift in Sources */,
+				8F45053E2D19E8FC00C59C80 /* StoriesProgressBar.swift in Sources */,
 				8F44C22B2CF599DB00663D7A /* CopyrightService.swift in Sources */,
 				8F39C9A32CFCBD4E0065A830 /* ServiceManager.swift in Sources */,
 			);

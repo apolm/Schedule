@@ -9,7 +9,7 @@ struct StoriesGroupScrollView: View {
             HStack(spacing: 16) {
                 ForEach(viewModel.groups) { group in
                     ZStack {
-                        Image(uiImage: group.image)
+                        group.image
                             .resizable()
                             .scaledToFill()
                             .frame(width: 92, height: 140)
@@ -36,8 +36,6 @@ struct StoriesGroupScrollView: View {
                             .onTapGesture {
                                 selectedGroup = group
                             }
-                        
-                        
                     }
                 }
             }
