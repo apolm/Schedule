@@ -1,7 +1,7 @@
 import SwiftUI
 
 struct ScheduleSearchView: View {
-    @StateObject var viewModel: ScheduleSearchViewModel
+    @ObservedObject var viewModel: ScheduleSearchViewModel
     @State private var isPresentingDestinationSelection = false
     @State private var selectingFrom = true
     
