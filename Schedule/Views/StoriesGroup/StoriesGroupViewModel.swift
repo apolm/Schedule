@@ -11,12 +11,12 @@ final class StoriesGroupViewModel: ObservableObject {
     }
     
     private func loadMockData() {
-        self.groups = StoriesGroup.mockStories
+        groups = StoriesGroup.mockStories
     }
     
     private func loadSeenStatus() {
         let idsArray = seenGroupIDsData.split(separator: ",").map { String($0) }
-        self.seenGroupIDs = Set(idsArray)
+        seenGroupIDs = Set(idsArray)
     }
     
     func markAsSeen(group: StoriesGroup) {

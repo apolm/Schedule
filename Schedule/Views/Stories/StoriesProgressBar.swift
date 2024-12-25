@@ -2,7 +2,7 @@ import SwiftUI
 import Combine
 
 struct StoriesProgressBar: View {
-    @Environment (\.dismiss) var dismiss
+    @Environment(\.dismiss) var dismiss
     @Binding var currentProgress: CGFloat
     
     let storiesCount: Int

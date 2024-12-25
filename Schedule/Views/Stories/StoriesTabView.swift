@@ -38,13 +38,6 @@ struct StoriesTabView: View {
     
     }
     
-    func didTapStory() {
-        let isLastStory = (currentStoryIndex == stories.count - 1)
-        if !isLastStory {
-            currentStoryIndex = currentStoryIndex + 1
-        }
-    }
-    
     private func didTapLeft() {
         let isFirstStory = (currentStoryIndex == 0)
         if !isFirstStory {

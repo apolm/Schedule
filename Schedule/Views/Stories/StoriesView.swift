@@ -1,9 +1,9 @@
 import SwiftUI
 
 struct StoriesView: View {
-    @Environment (\.dismiss) var dismiss
-    @State var currentStoryIndex: Int = 0
-    @State var currentProgress: CGFloat = 0
+    @Environment(\.dismiss) var dismiss
+    @State private var currentStoryIndex: Int = 0
+    @State private var currentProgress: CGFloat = 0
     
     let stories: [Story]
     
@@ -12,8 +12,8 @@ struct StoriesView: View {
     var body: some View {
         ZStack(alignment: .topTrailing) {
             StoriesTabView(stories: stories, currentStoryIndex: $currentStoryIndex)
-                .onChange(of: currentStoryIndex) {newValue in
-                    didChangeCurrentIndex(newIndex: newValue)
+                .onChange(of: currentStoryIndex) { newIndex in
+                    didChangeCurrentIndex(newIndex: newIndex)
                 }
             
             VStack(alignment: .trailing, spacing: 0) {

@@ -1,7 +1,7 @@
 import SwiftUI
 
 struct StoriesGroupScrollView: View {
-    @StateObject var viewModel = StoriesGroupViewModel()
+    @StateObject private var viewModel = StoriesGroupViewModel()
     @State private var selectedGroup: StoriesGroup? = nil
     
     var body: some View {
@@ -16,12 +16,9 @@ struct StoriesGroupScrollView: View {
                             .clipped()
                             .cornerRadius(16)
                             .overlay(
-                                Group {
-                                    if !viewModel.hasSeen(group: group) {
-                                        RoundedRectangle(cornerRadius: 16)
-                                            .stroke(Color.blue, lineWidth: 4)
-                                    }
-                                }
+                                RoundedRectangle(cornerRadius: 16)
+                                    .stroke(Color.blue, lineWidth: 4)
+                                    .hidden(viewModel.hasSeen(group: group))
                             )
                             .overlay(alignment: .bottom) {
                                 Text(group.title)

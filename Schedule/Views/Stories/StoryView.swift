@@ -14,11 +14,13 @@ struct StoryView: View {
                 .overlay(
                     VStack {
                         Spacer()
+                        
                         VStack(alignment: .leading, spacing: 16) {
                             Text(story.title)
                                 .font(.system(size: 34, weight: .bold))
                                 .lineLimit(2)
                                 .foregroundColor(.ypWhiteUniversal)
+                            
                             Text(story.description)
                                 .font(.system(size: 20))
                                 .lineLimit(3)
