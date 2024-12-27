@@ -2,7 +2,7 @@ import SwiftUI
 
 struct ScheduleListView: View {
     @Environment(\.presentationMode) var presentationMode
-    @StateObject var viewModel: ScheduleListViewModel
+    @ObservedObject var viewModel: ScheduleListViewModel
     @State private var path = NavigationPath()
     
     var body: some View {
@@ -19,26 +19,26 @@ struct ScheduleListView: View {
                             .frame(maxWidth: .infinity, alignment: .leading)
                         
                         ZStack {
-                            if !viewModel.filters.isEmpty && viewModel.filteredRoutes.isEmpty {
-                                StubView(message: "Вариантов нет")
-                            } else {
-                                List {
-                                    ForEach(viewModel.filteredRoutes) { route in
-                                        Button {
-                                            path.append(route.carrier)
-                                        } label: {
-                                            RouteView(route: route)
-                                                .listRowSeparator(.hidden)
-                                                .listRowInsets(EdgeInsets())
-                                        }
-                                        .buttonStyle(.plain)
-                                        .listRowSeparator(.hidden)
-                                        .listRowInsets(EdgeInsets())
+                            StubView(message: "Вариантов нет")
+                                .hidden(!viewModel.filteredRoutes.isEmpty)
+                            
+                            List {
+                                ForEach(viewModel.filteredRoutes) { route in
+                                    Button {
+                                        path.append(route.carrier)
+                                    } label: {
+                                        RouteView(route: route)
+                                            .listRowSeparator(.hidden)
+                                            .listRowInsets(EdgeInsets())
                                     }
+                                    .buttonStyle(.plain)
+                                    .listRowSeparator(.hidden)
+                                    .listRowInsets(EdgeInsets())
                                 }
-                                .listStyle(.plain)
-                                .listRowSpacing(8)
                             }
+                            .listStyle(.plain)
+                            .listRowSpacing(8)
+                            .hidden(viewModel.filteredRoutes.isEmpty)
                             
                             VStack {
                                 Spacer()
@@ -69,10 +69,8 @@ struct ScheduleListView: View {
                 }
             }
             .background(.ypWhite)
-            .onAppear {
-                Task {
-                    await viewModel.fetchRoutes()
-                }
+            .task {
+                await viewModel.fetchRoutes()
             }
             .navigationToolbar(title: nil, presentationMode: presentationMode)
             .navigationDestination(for: String.self) { value in
