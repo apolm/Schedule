@@ -908,6 +908,11 @@ components:
             - vag6
             - river
             - sea
+            - plane
+            - train
+            - suburban
+            - bus
+            - water
         title:
           type: string
           description: 'A natural language description of the transport subtype.'
