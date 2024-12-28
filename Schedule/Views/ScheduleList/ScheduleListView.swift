@@ -81,7 +81,7 @@ struct ScheduleListView: View {
                 }
             }
             .navigationDestination(for: Carrier.self) { carrier in
-                CarrierView(carrier: carrier)
+                CarrierView(viewModel: CarrierViewModel(carrier: carrier))
             }
         }
     }
