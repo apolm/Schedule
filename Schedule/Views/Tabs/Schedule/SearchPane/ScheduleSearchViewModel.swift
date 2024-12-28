@@ -1,5 +1,6 @@
 import SwiftUI
 
+@MainActor
 final class ScheduleSearchViewModel: ObservableObject {
     @Published var settlementFrom: Settlement?
     @Published var stationFrom: Station?
