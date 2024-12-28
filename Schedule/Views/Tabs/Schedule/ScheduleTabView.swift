@@ -22,8 +22,7 @@ struct ScheduleTabView: View {
                         settlementFrom: settlementFrom,
                         stationFrom: stationFrom,
                         settlementTo: settlementTo,
-                        stationTo: stationTo,
-                        dataProvider: MockDataProvider()
+                        stationTo: stationTo
                     )
                 } label: {
                     Text("Найти")

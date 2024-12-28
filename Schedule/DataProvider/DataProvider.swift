@@ -1,6 +1,6 @@
 import Foundation
 
-final class DataProvider: DataProviderProtocol {
+actor DataProvider: DataProviderProtocol {
     static let shared = DataProvider()
     private let converter = DataConverter()
     private var settlements: [Settlement]?

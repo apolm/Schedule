@@ -1,6 +1,6 @@
 import Foundation
 
-struct Route: Identifiable {
+struct Route: Identifiable, Sendable {
     let id: String
     let date: Date
     let departure: Date

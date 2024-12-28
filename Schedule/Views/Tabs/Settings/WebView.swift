@@ -45,7 +45,8 @@ struct WebView: UIViewRepresentable {
         
     }
     
-    class Coordinator: NSObject, WKNavigationDelegate {
+    @MainActor
+    class Coordinator: NSObject {
         var parent: WebView
         var isDarkMode: Bool
         
@@ -54,26 +55,47 @@ struct WebView: UIViewRepresentable {
             self.isDarkMode = isDarkMode
         }
         
-        func webView(_ webView: WKWebView, didStartProvisionalNavigation navigation: WKNavigation!) {
-            parent.isLoading = true
+        func setLoadingState(_ loading: Bool) {
+            parent.isLoading = loading
         }
         
-        func webView(_ webView: WKWebView, didFinish navigation: WKNavigation!) {
-            parent.isLoading = false
-            
-            if isDarkMode {
-                let jsAddStyle = """
+        func runDarkModeScript(on webView: WKWebView) {
+            let jsAddStyle = """
                     var style = document.createElement('style');
                     style.innerText = `\(WebView.css)`;
                     document.head.appendChild(style);
                 """
-                
-                webView.evaluateJavaScript(jsAddStyle, completionHandler: nil)
+            webView.evaluateJavaScript(jsAddStyle, completionHandler: nil)
+        }
+    }
+}
+
+extension WebView.Coordinator: WKNavigationDelegate {
+    
+    nonisolated func webView(_ webView: WKWebView,
+                             didStartProvisionalNavigation navigation: WKNavigation!) {
+        DispatchQueue.main.async { [weak self] in
+            self?.setLoadingState(true)
+        }
+    }
+    
+    nonisolated func webView(_ webView: WKWebView,
+                             didFinish navigation: WKNavigation!) {
+        DispatchQueue.main.async { [weak self] in
+            guard let self = self else { return }
+            self.setLoadingState(false)
+            
+            if self.isDarkMode {
+                self.runDarkModeScript(on: webView)
             }
         }
-        
-        func webView(_ webView: WKWebView, didFail navigation: WKNavigation!, withError error: Error) {
-            parent.isLoading = false
+    }
+    
+    nonisolated func webView(_ webView: WKWebView,
+                             didFail navigation: WKNavigation!,
+                             withError error: Error) {
+        DispatchQueue.main.async { [weak self] in
+            self?.setLoadingState(false)
         }
     }
 }

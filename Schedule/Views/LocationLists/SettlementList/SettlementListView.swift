@@ -2,7 +2,7 @@ import SwiftUI
 
 struct SettlementListView: View {
     @Environment(\.presentationMode) var presentationMode
-    @StateObject var viewModel = SettlementListViewModel(dataProvider: MockDataProvider())
+    @StateObject var viewModel = SettlementListViewModel()
     @State private var path = NavigationPath()
     
     var onStationSelected: (SelectedStation) -> Void
@@ -43,10 +43,8 @@ struct SettlementListView: View {
                     .padding(.horizontal, 16)
                 }
             }
-            .onAppear {
-                Task {
-                    await viewModel.fetchSettlements()
-                }
+            .task {
+                await viewModel.fetchSettlements()
             }
             .background(.ypWhite)
             .navigationToolbar(title: "Выбор города", presentationMode: presentationMode)

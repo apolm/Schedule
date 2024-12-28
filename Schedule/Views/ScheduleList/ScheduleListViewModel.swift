@@ -1,5 +1,6 @@
 import SwiftUI
 
+@MainActor
 final class ScheduleListViewModel: ObservableObject, Identifiable {
     @Published private(set) var allRoutes: [Route] = []
     @Published private(set) var isLoading = false
@@ -43,7 +44,6 @@ final class ScheduleListViewModel: ObservableObject, Identifiable {
         filters = newValue
     }
     
-    @MainActor
     func fetchRoutes() async {
         isLoading = true
         loadingFailed = false
