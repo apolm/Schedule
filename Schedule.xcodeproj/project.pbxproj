@@ -73,6 +73,7 @@
 		8FE0C75C2D0F33F6007DE19C /* DateFormatterProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8FE0C75B2D0F33F6007DE19C /* DateFormatterProvider.swift */; };
 		8FE0C7632D0F4563007DE19C /* SDWebImageSVGKitPlugin in Frameworks */ = {isa = PBXBuildFile; productRef = 8FE0C7622D0F4563007DE19C /* SDWebImageSVGKitPlugin */; };
 		8FE0C7652D0F45FF007DE19C /* SVGImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8FE0C7642D0F45FF007DE19C /* SVGImageView.swift */; };
+		8FEC77192D1FD30500906361 /* CarrierViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8FEC77182D1FD30500906361 /* CarrierViewModel.swift */; };
 		8FF065792CF3046D00347B67 /* NearestSettlementService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8FF065782CF3046D00347B67 /* NearestSettlementService.swift */; };
 		8FF0657C2CF325DD00347B67 /* ClientFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8FF0657B2CF325DD00347B67 /* ClientFactory.swift */; };
 		8FF0657F2CF3306C00347B67 /* CarrierService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8FF0657E2CF3306C00347B67 /* CarrierService.swift */; };
@@ -160,6 +161,7 @@
 		8FE0C7582D0F15CE007DE19C /* RouteView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RouteView.swift; sourceTree = "<group>"; };
 		8FE0C75B2D0F33F6007DE19C /* DateFormatterProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateFormatterProvider.swift; sourceTree = "<group>"; };
 		8FE0C7642D0F45FF007DE19C /* SVGImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SVGImageView.swift; sourceTree = "<group>"; };
+		8FEC77182D1FD30500906361 /* CarrierViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CarrierViewModel.swift; sourceTree = "<group>"; };
 		8FF065782CF3046D00347B67 /* NearestSettlementService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NearestSettlementService.swift; sourceTree = "<group>"; };
 		8FF0657B2CF325DD00347B67 /* ClientFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClientFactory.swift; sourceTree = "<group>"; };
 		8FF0657E2CF3306C00347B67 /* CarrierService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CarrierService.swift; sourceTree = "<group>"; };
@@ -450,6 +452,7 @@
 			isa = PBXGroup;
 			children = (
 				8FCAB8ED2D1147B3008C2BC5 /* CarrierView.swift */,
+				8FEC77182D1FD30500906361 /* CarrierViewModel.swift */,
 			);
 			path = Carrier;
 			sourceTree = "<group>";
@@ -629,6 +632,7 @@
 				8F69FA952CF051020078C2A5 /* NearestStationsService.swift in Sources */,
 				8FF0657C2CF325DD00347B67 /* ClientFactory.swift in Sources */,
 				8FE0C7652D0F45FF007DE19C /* SVGImageView.swift in Sources */,
+				8FEC77192D1FD30500906361 /* CarrierViewModel.swift in Sources */,
 				8FE0C74C2D0DE79D007DE19C /* ScheduleListViewModel.swift in Sources */,
 				8FE0C74A2D0DE767007DE19C /* ScheduleListView.swift in Sources */,
 				8FA04FB52D13D9B0008F15BD /* ScheduleTabView.swift in Sources */,
@@ -769,6 +773,7 @@
 				SDKROOT = iphoneos;
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "DEBUG $(inherited)";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_STRICT_CONCURRENCY = complete;
 			};
 			name = Debug;
 		};
@@ -824,6 +829,7 @@
 				MTL_FAST_MATH = YES;
 				SDKROOT = iphoneos;
 				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_STRICT_CONCURRENCY = complete;
 				VALIDATE_PRODUCT = YES;
 			};
 			name = Release;

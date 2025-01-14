@@ -1,5 +1,6 @@
 import SwiftUI
 
+@MainActor
 final class StoriesGroupViewModel: ObservableObject {
     @Published var groups: [StoriesGroup] = []
     @Published var seenGroupIDs: Set<String> = []

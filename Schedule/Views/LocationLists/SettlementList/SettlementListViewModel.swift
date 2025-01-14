@@ -1,5 +1,6 @@
 import SwiftUI
 
+@MainActor
 final class SettlementListViewModel: ObservableObject {
     @Published private(set) var allSettlements: [Settlement] = []
     @Published private(set) var isLoading = false
@@ -24,7 +25,6 @@ final class SettlementListViewModel: ObservableObject {
         self.dataProvider = dataProvider
     }
     
-    @MainActor
     func fetchSettlements() async {
         isLoading = true
         loadingFailed = false

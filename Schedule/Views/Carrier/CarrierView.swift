@@ -2,11 +2,11 @@ import SwiftUI
 
 struct CarrierView: View {
     @Environment(\.presentationMode) var presentationMode
-    let carrier: Carrier
+    @ObservedObject var viewModel: CarrierViewModel
     
     var body: some View {
         VStack(spacing: 16) {
-            AsyncImage(url: URL(string: carrier.logoFull)) { image in
+            AsyncImage(url: viewModel.logoURL) { image in
                 image
                     .resizable()
                     .scaledToFit()
@@ -18,14 +18,14 @@ struct CarrierView: View {
             .padding(16)
             
             VStack(alignment: .leading, spacing: 28) {
-                Text(carrier.title)
+                Text(viewModel.title)
                     .titleTextStyle()
                 
                 VStack(alignment: .leading, spacing: 4) {
                     Text("E-mail")
                         .foregroundStyle(.ypBlack)
                     
-                    Text(carrier.email ?? "-")
+                    Text(viewModel.email)
                         .font(.caption)
                         .foregroundStyle(.ypBlue)
                 }
@@ -34,7 +34,7 @@ struct CarrierView: View {
                     Text("Телефон")
                         .foregroundStyle(.ypBlack)
                     
-                    Text(carrier.phone ?? "-")
+                    Text(viewModel.phone)
                         .font(.caption)
                         .foregroundStyle(.ypBlue)
                 }
@@ -50,5 +50,5 @@ struct CarrierView: View {
 }
 
 #Preview {
-    CarrierView(carrier: MockDataProvider.carrier)
+    CarrierView(viewModel: CarrierViewModel(carrier: MockDataProvider.carrier))
 }
